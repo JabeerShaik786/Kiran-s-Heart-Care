@@ -1,0 +1,114 @@
+"use client";
+
+import { useRef, useEffect, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { Award, Users, HeartHandshake, ShieldAlert } from "lucide-react";
+
+interface StatItem {
+  id: number;
+  icon: React.ElementType;
+  value: number;
+  suffix: string;
+  label: string;
+}
+
+const STATS: StatItem[] = [
+  {
+    id: 1,
+    icon: Award,
+    value: 25,
+    suffix: "+",
+    label: "Years Experience",
+  },
+  {
+    id: 2,
+    icon: Users,
+    value: 10000,
+    suffix: "+",
+    label: "Patients Treated",
+  },
+  {
+    id: 3,
+    icon: HeartHandshake,
+    value: 99,
+    suffix: "%",
+    label: "Patient Satisfaction",
+  },
+  {
+    id: 4,
+    icon: ShieldAlert,
+    value: 24,
+    suffix: "×7",
+    label: "Emergency Support",
+  },
+];
+
+function CountUp({ to, duration = 2 }: { to: number; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  useEffect(() => {
+    if (!isInView) return;
+    
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / (duration * 1000), 1);
+      setCount(Math.floor(progress * to));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [isInView, to, duration]);
+
+  return <span ref={ref}>{count.toLocaleString()}</span>;
+}
+
+export default function TrustBar() {
+  return (
+    <section className="w-full relative z-20 px-6 md:px-12 -mt-10 max-w-[1440px] mx-auto">
+      <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-6 p-6 md:p-8 rounded-3xl bg-white shadow-xl shadow-primary/5 border border-borders/60">
+        {STATS.map((stat, idx) => {
+          const IconComponent = stat.icon;
+          return (
+            <motion.div
+              key={stat.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
+              whileHover={{ y: -4 }}
+              className={`flex items-center gap-4 p-4 md:p-6 rounded-2xl transition-all duration-300 hover:bg-slate-50/50 ${
+                idx !== STATS.length - 1 ? "lg:border-r border-borders/60" : ""
+              }`}
+            >
+              <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center shrink-0">
+                <IconComponent className="w-6 h-6" />
+              </div>
+              <div className="flex flex-col">
+                <div className="font-heading font-extrabold text-2xl md:text-3xl text-dark-text tracking-tight flex items-baseline">
+                  {stat.id === 4 ? (
+                    // For "24x7" we render specifically
+                    <span>
+                      24<span className="text-secondary text-lg font-semibold mx-0.5">×</span>7
+                    </span>
+                  ) : (
+                    <>
+                      <CountUp to={stat.value} />
+                      <span className="text-secondary ml-0.5">{stat.suffix}</span>
+                    </>
+                  )}
+                </div>
+                <span className="text-xs md:text-sm font-medium text-gray-text mt-0.5 leading-tight">
+                  {stat.label}
+                </span>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
