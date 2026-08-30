@@ -63,27 +63,27 @@ export default function Hero() {
               <Smile className="w-4 h-4 text-primary relative animate-pulse" />
             </div>
             <span className="text-sm font-semibold text-primary tracking-wide">
-              Trusted Dental Care Clinic
+              Welcome to V.R. Dental Care
             </span>
           </motion.div>
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-heading font-extrabold text-4xl md:text-5xl lg:text-[64px] tracking-tight text-dark-text leading-[1.08] mb-6"
+            className="font-heading font-extrabold text-4xl md:text-5xl lg:text-[54px] tracking-tight text-dark-text leading-[1.08] mb-6"
           >
-            Advanced Dental Care for a{" "}
+            Transforming Smiles,{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Healthier Smile
+              Transforming Lives
             </span>
           </motion.h1>
 
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-text font-normal leading-relaxed max-w-xl mb-8"
+            className="text-lg md:text-xl text-gray-text font-bold tracking-wide uppercase leading-relaxed max-w-xl mb-8"
           >
-            Experience modern, comfortable, and personalized dental care with advanced technology and compassionate treatment.
+            We Are Best Dental Services
           </motion.p>
 
           {/* Action Buttons */}

@@ -17,36 +17,43 @@ const ARTICLES: BlogPost[] = [
     id: 1,
     image: "/healthy_smile.jpg",
     category: "Oral Hygiene",
-    title: "5 Simple Ways to Keep Your Teeth Healthy",
-    shortDesc: "Discover the best daily habits and tips for maintaining excellent oral hygiene and a bright smile between dental visits.",
+    title: "How to Maintain Healthy Teeth Every Day",
+    shortDesc: "A complete guide on essential habits, correct brushing methods, and minor dietary changes to preserve your teeth health every day.",
   },
   {
     id: 2,
     image: "/dental_checkup.jpg",
-    category: "Dental Advice",
+    category: "Treatments",
     title: "When Do You Need a Root Canal?",
-    shortDesc: "Learn about the common warning signs, symptoms, and indications that suggest you might need a root canal procedure to save a tooth.",
+    shortDesc: "Recognizing key clinical signs, symptoms, and warning indicators that suggest a root canal is needed to protect a damaged tooth.",
   },
   {
     id: 3,
-    image: "/dental_checkup.jpg",
-    category: "Prevention",
-    title: "How Often Should You Visit a Dentist?",
-    shortDesc: "Understand the critical importance of regular preventive dental checkups and how they save you from complex treatments later.",
-  },
-  {
-    id: 4,
-    image: "/healthy_smile.jpg",
-    category: "Cosmetic Dentistry",
-    title: "Teeth Whitening: What You Should Know",
-    shortDesc: "Get the facts about professional teeth whitening, how it works, what to expect, and how to maintain your sparkling white smile.",
-  },
-  {
-    id: 5,
     image: "/healthy_smile.jpg",
     category: "Oral Health",
     title: "How to Prevent Cavities",
-    shortDesc: "A complete guide on simple eating and brushing habits that prevent tooth decay, protect enamel, and block cavity formation.",
+    shortDesc: "Understanding the underlying mechanics of tooth decay and adopting simple, active daily habits to keep your enamel strong.",
+  },
+  {
+    id: 4,
+    image: "/dental_checkup.jpg",
+    category: "Prevention",
+    title: "Importance of Regular Dental Checkups",
+    shortDesc: "Why regular biannual examinations and professional dental cleanings are the absolute foundation of long-term oral wellness.",
+  },
+  {
+    id: 5,
+    image: "/dental_checkup.jpg",
+    category: "Orthodontics",
+    title: "What Is Orthodontic Treatment?",
+    shortDesc: "An educational overview of dental alignment devices, clear aligners, and clinical timing for correcting bite problems.",
+  },
+  {
+    id: 6,
+    image: "/healthy_smile.jpg",
+    category: "Cosmetic",
+    title: "Understanding Cosmetic Dentistry",
+    shortDesc: "Exploring smile design elements, dental bonding, teeth whitening options, and custom treatments to enhance smile aesthetics.",
   },
 ];
 
@@ -64,7 +71,7 @@ export default function Blog() {
             Dental Health Blog
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
-            Latest Articles & Oral Tips
+            Dental Health & Insights
           </h2>
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>

@@ -80,10 +80,10 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col text-left">
                 <span className="font-heading font-extrabold text-[12px] md:text-sm tracking-tight text-primary leading-tight uppercase">
-                  [Dental Clinic Name]
+                  V.R. Dental Care
                 </span>
                 <span className="font-sans font-medium text-[7px] tracking-[0.1em] text-gray-text uppercase leading-none mt-0.5">
-                  Advanced Dental Care
+                  Transforming Smiles
                 </span>
               </div>
             </a>

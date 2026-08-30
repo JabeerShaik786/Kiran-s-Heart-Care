@@ -15,32 +15,31 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "[Dental Clinic Name] | Premium Dental Care & Smile Center",
-  description: "Experience modern, comfortable, and personalized dental care at [Dental Clinic Name]. Specializing in preventive hygiene, teeth cleaning, root canal therapy, dental implants, teeth whitening, clear aligners, and aesthetic smile design.",
+  title: "V.R. Dental Care | Transforming Smiles, Transforming Lives",
+  description: "V.R. Dental Care provides professional and personalized dental services in a modern and comfortable environment.",
   keywords: [
-    "[Dental Clinic Name]",
+    "V.R. Dental Care",
     "Dentist",
     "Dental Clinic",
-    "Root Canal Treatment",
-    "Dental Implants",
-    "Teeth Whitening",
-    "Teeth Cleaning & Polishing",
-    "Clear Aligners & Braces",
+    "Root Canal",
+    "Cavity Inspection",
+    "Orthodontics",
+    "Teeth Alignment",
     "Cosmetic Dentistry",
-    "Pediatric Dentist",
+    "General Dental Consultation",
   ],
-  authors: [{ name: "[Dental Clinic Name]" }],
+  authors: [{ name: "V.R. Dental Care" }],
   openGraph: {
-    title: "[Dental Clinic Name] | Advanced Dental Care & Smile Center",
-    description: "Expert dental diagnostic and treatment options with a compassionate, patient-first approach.",
+    title: "V.R. Dental Care | Transforming Smiles, Transforming Lives",
+    description: "V.R. Dental Care provides professional and personalized dental services in a modern and comfortable environment.",
     type: "website",
     locale: "en_US",
-    siteName: "[Dental Clinic Name]",
+    siteName: "V.R. Dental Care",
   },
   twitter: {
     card: "summary_large_image",
-    title: "[Dental Clinic Name]",
-    description: "Advanced Dental Care & Smile Center.",
+    title: "V.R. Dental Care",
+    description: "Transforming Smiles, Transforming Lives. Providing professional, personalized, and comfortable dental care.",
   },
 };
 

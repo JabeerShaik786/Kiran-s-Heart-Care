@@ -91,7 +91,7 @@ export default function ContactSection() {
             Appointment Booking
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
-            Book Your Dental Appointment
+            Book Your Appointment
           </h2>
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>
@@ -111,7 +111,7 @@ export default function ContactSection() {
             <div className="relative rounded-[24px] overflow-hidden border border-white/60 shadow-[0_30px_80px_rgba(15,23,42,0.12)] group-hover:shadow-[0_40px_90px_rgba(15,23,42,0.18)] transition-all duration-300 aspect-[4/5] w-full max-w-[420px]">
               <Image
                 src="/dentist_portrait.jpg"
-                alt="Clinic Dentist Portrait"
+                alt="V.R. Dental Care Dentist Portrait"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -123,10 +123,9 @@ export default function ContactSection() {
                   <Smile className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex flex-col text-left">
-                  <span className="text-base font-extrabold text-slate-800 leading-tight">[Dental Clinic Name]</span>
-                  <span className="text-xs text-slate-600 font-semibold mt-0.5">Chief Dentist & Surgeon</span>
-                  <span className="text-[11px] text-slate-500 font-bold mt-0.5">Smile Design & Restorative Care</span>
-                  <span className="text-[11px] text-primary font-bold mt-1 tracking-wider uppercase">25+ Years Experience</span>
+                  <span className="text-base font-extrabold text-slate-800 leading-tight">V.R. Dental Care</span>
+                  <span className="text-xs text-slate-600 font-semibold mt-0.5">Transforming Smiles, Transforming Lives</span>
+                  <span className="text-[11px] text-primary font-bold mt-1.5 tracking-wider uppercase">Professional Care</span>
                 </div>
               </div>
             </div>
@@ -146,10 +145,10 @@ export default function ContactSection() {
                     transition={{ duration: 0.3 }}
                   >
                     <h3 className="font-heading font-extrabold text-3xl text-dark-text tracking-tight mb-2 text-left">
-                      Book Your Dental Appointment
+                      Book Your Appointment
                     </h3>
                     <p className="text-sm text-gray-text font-normal leading-relaxed text-left mb-8">
-                      Take the first step towards a healthier and more confident smile. Schedule your dental consultation today.
+                      Take the first step towards a healthier and more confident smile.
                     </p>
 
                     <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
@@ -234,7 +233,7 @@ export default function ContactSection() {
                         )}
                       </div>
 
-                      {/* Preferred Time (NEW Field!) */}
+                      {/* Preferred Time */}
                       <div className="flex flex-col">
                         <label htmlFor="time" className="text-xs font-bold text-dark-text uppercase tracking-wider mb-2">
                           Preferred Time *
@@ -266,17 +265,13 @@ export default function ContactSection() {
                           {...register("service", { required: "Please select a dental service" })}
                         >
                           <option value="" disabled>Select dental service</option>
-                          <option value="general">General Dentistry</option>
-                          <option value="cleaning">Teeth Cleaning & Polishing</option>
-                          <option value="rootcanal">Root Canal Treatment</option>
-                          <option value="implants">Dental Implants</option>
-                          <option value="whitening">Teeth Whitening</option>
-                          <option value="crowns">Crowns & Bridges</option>
-                          <option value="braces">Braces & Aligners</option>
-                          <option value="cosmetic">Cosmetic Dentistry</option>
-                          <option value="pediatric">Pediatric Dentistry</option>
-                          <option value="wisdom">Wisdom Tooth Treatment</option>
-                          <option value="other">Other Concern</option>
+                          <option value="Root Canal">Root Canal</option>
+                          <option value="Cavity Inspection">Cavity Inspection</option>
+                          <option value="Orthodontics">Orthodontics</option>
+                          <option value="Teeth Alignment">Teeth Alignment</option>
+                          <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                          <option value="General Dental Consultation">General Dental Consultation</option>
+                          <option value="Other">Other</option>
                         </select>
                         {errors.service && (
                           <span className="text-xs text-red-500 mt-1.5 font-bold">{errors.service.message}</span>
@@ -286,7 +281,7 @@ export default function ContactSection() {
                       {/* Message / Dental Concern */}
                       <div className="sm:col-span-2 flex flex-col">
                         <label htmlFor="message" className="text-xs font-bold text-dark-text uppercase tracking-wider mb-2">
-                          Dental Concern / Message (Optional)
+                          Message / Dental Concern
                         </label>
                         <textarea
                           id="message"
@@ -333,7 +328,7 @@ export default function ContactSection() {
                     </h3>
                     
                     <p className="text-base text-gray-text max-w-md leading-relaxed font-normal mb-8">
-                      Thank you for choosing [Dental Clinic Name]. Our clinical team has received your request and will call you back at your provided phone number within the next <strong>2 hours</strong> to confirm your slot.
+                      Thank you for choosing V.R. Dental Care. Our clinical team has received your request and will call you back at your provided phone number to confirm your slot.
                     </p>
                     
                     <div className="p-4 rounded-2xl bg-slate-50 border border-borders/60 flex items-center gap-3 text-left w-full max-w-sm mb-8">
@@ -372,7 +367,7 @@ export default function ContactSection() {
             className="lg:col-span-8 w-full rounded-[24px] overflow-hidden shadow-[0_15px_50px_rgba(15,23,42,0.05)] border border-borders relative h-[450px]"
           >
             <iframe
-              title="Dental Clinic Map Location"
+              title="V.R. Dental Care Clinic Map Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.562013898165!2d77.21822357618956!3d28.613939075674287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sCentral%20Park!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               className="absolute inset-0 w-full h-full border-none"
               loading="lazy"
@@ -399,8 +394,8 @@ export default function ContactSection() {
             />
             <ContactCard
               icon={Clock}
-              title="Consultation Hours"
-              details="Monday – Saturday: 9:00 AM – 8:00 PM | Sunday: Closed"
+              title="Working Hours"
+              details="[Working Hours]"
             />
           </div>
 

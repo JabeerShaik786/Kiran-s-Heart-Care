@@ -15,37 +15,37 @@ const STEPS: Step[] = [
     id: 1,
     icon: CalendarCheck,
     title: "Book Appointment",
-    desc: "Easily schedule your consultation online or call our friendly dental front desk.",
+    desc: "Schedule your dental visit at a convenient time.",
   },
   {
     id: 2,
     icon: Smile,
     title: "Dental Consultation",
-    desc: "Meet our dental team for an in-depth review of your teeth health, goals, and history.",
+    desc: "Discuss your dental concerns with our dental professionals.",
   },
   {
     id: 3,
     icon: ClipboardList,
     title: "Diagnosis",
-    desc: "Undergo low-exposure digital X-rays and intraoral scans to identify clinical issues.",
+    desc: "Receive a thorough examination to understand your dental needs.",
   },
   {
     id: 4,
     icon: ShieldPlus,
-    title: "Personalized Treatment Plan",
-    desc: "Receive a customized dental care plan outline covering preventive, restorative, or aesthetic treatments.",
+    title: "Personalized Treatment",
+    desc: "Get a treatment plan based on your individual requirements.",
   },
   {
     id: 5,
     icon: Sparkles,
-    title: "Dental Treatment",
-    desc: "Undergo your dental procedure utilizing gentle techniques and modern clinical equipment.",
+    title: "Comfortable Treatment",
+    desc: "Receive professional dental care in a modern and comfortable environment.",
   },
   {
     id: 6,
     icon: Activity,
     title: "Follow-Up Care",
-    desc: "Receive hygiene guidelines and attend routine dental checkups to sustain a healthy smile.",
+    desc: "Receive guidance for maintaining long-term oral health.",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function PatientJourney() {
             Patient Path
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
-            Your Journey to a Healthy, Bright Smile
+            Your Dental Care Journey
           </h2>
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>

@@ -18,33 +18,33 @@ interface Testimonial {
 const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    name: "Amit Sharma",
-    location: "New Delhi",
-    treatment: "Root Canal Treatment",
+    name: "Patient Review A",
+    location: "General Dentistry",
+    treatment: "Treatment Discussion",
     rating: 5,
-    quote: "I was extremely nervous about getting a root canal, but the team here made the procedure completely comfortable and pain-free. The clinic is highly modern, and the dentist explained everything before beginning. I highly recommend their care!",
-    date: "2 weeks ago",
-    initials: "AS",
+    quote: "The doctor explained my treatment clearly and made my dental visit very comfortable.",
+    date: "Feedback",
+    initials: "P1",
   },
   {
     id: 2,
-    name: "Priya Nair",
-    location: "Gurugram",
-    treatment: "Teeth Whitening",
+    name: "Patient Review B",
+    location: "Hygienic Environment",
+    treatment: "Clinic Visit",
     rating: 5,
-    quote: "Outstanding teeth whitening results! My smile is several shades brighter now, and the treatment was quick and comfortable. The staff is professional, and the environment is very clean and welcoming.",
-    date: "1 month ago",
-    initials: "PN",
+    quote: "The clinic is clean, modern, and welcoming. I had a very good experience.",
+    date: "Feedback",
+    initials: "P2",
   },
   {
     id: 3,
-    name: "Rajesh Patel",
-    location: "Noida",
-    treatment: "Dental Implants",
+    name: "Patient Review C",
+    location: "Supportive Care",
+    treatment: "Patient Care",
     rating: 5,
-    quote: "The dental implant procedure was handled with absolute precision and care. From the initial 3D scans to the final crown fitting, everything was smooth and transparent. I can smile and chew normally again!",
-    date: "3 months ago",
-    initials: "RP",
+    quote: "I received excellent care and the staff were very supportive throughout my treatment.",
+    date: "Feedback",
+    initials: "P3",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function Testimonials() {
             Patient Stories
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
-            Loved and Trusted by Over 10,000+ Patients
+            Loved and Trusted by Our Patients
           </h2>
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>
@@ -113,7 +113,7 @@ export default function Testimonials() {
           </div>
           <span className="text-sm font-bold text-dark-text">4.9 / 5.0 Rating</span>
           <span className="text-xs text-gray-text font-medium border-l border-borders pl-2.5">
-            Verified Google Reviews
+            Verified Patient Reviews
           </span>
         </div>
 
@@ -168,7 +168,7 @@ export default function Testimonials() {
                   </p>
                   
                   <span className="text-xs text-gray-text font-semibold text-right sm:text-left self-end sm:self-start">
-                    Verified Patient • {current.date}
+                    {current.date}
                   </span>
                 </div>
               </motion.div>

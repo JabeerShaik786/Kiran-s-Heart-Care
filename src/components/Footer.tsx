@@ -32,20 +32,20 @@ export default function Footer() {
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-lg tracking-tight text-white leading-tight uppercase">
-                [Dental Clinic Name]
+                V.R. Dental Care
               </span>
               <span className="font-sans font-medium text-[9px] tracking-[0.1em] text-accent uppercase leading-none mt-0.5">
-                Advanced Smile Center
+                Transforming Smiles
               </span>
             </div>
           </a>
           <p className="text-white/60 text-sm leading-relaxed max-w-sm text-left">
-            [Dental Clinic Name] — Advanced Dental Care & Smile Center. Providing modern, comfortable, and personalized dental care for healthier smiles.
+            V.R. Dental Care — Transforming Smiles, Transforming Lives. Providing professional, personalized, and comfortable dental care for healthier smiles.
           </p>
           <div className="flex items-center gap-3">
             <span className="text-[12px] bg-primary/20 text-accent px-3.5 py-1 rounded-full font-semibold border border-primary/10 flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5" />
-              Hours: Mon – Sat (9am – 8pm)
+              Hours: [Working Hours]
             </span>
           </div>
         </div>
@@ -59,9 +59,9 @@ export default function Footer() {
             {[
               { name: "Home", href: "#home" },
               { name: "Services", href: "#services" },
-              { name: "About Us", href: "#about" },
-              { name: "Blog / Articles", href: "#blog" },
-              { name: "Contact Us", href: "#contact" },
+              { name: "About", href: "#about" },
+              { name: "Blog", href: "#blog" },
+              { name: "Contact", href: "#contact" },
               { name: "Book Appointment", href: "#contact" },
             ].map((link) => (
               <li key={link.name}>
@@ -84,13 +84,12 @@ export default function Footer() {
           </h4>
           <ul className="flex flex-col gap-3.5 text-sm text-white/60">
             {[
-              { name: "General Dentistry", href: "#services" },
-              { name: "Teeth Cleaning & Polishing", href: "#services" },
-              { name: "Root Canal Treatment", href: "#services" },
-              { name: "Dental Implants", href: "#services" },
-              { name: "Teeth Whitening", href: "#services" },
-              { name: "Crowns & Bridges", href: "#services" },
-              { name: "Braces & Aligners", href: "#services" },
+              { name: "Root Canal", href: "#services" },
+              { name: "Cavity Inspection", href: "#services" },
+              { name: "Live Advisor", href: "#services" },
+              { name: "Orthodontics", href: "#services" },
+              { name: "Teeth Alignment", href: "#services" },
+              { name: "Cosmetic Dentistry", href: "#services" },
             ].map((link) => (
               <li key={link.name}>
                 <a
@@ -108,7 +107,7 @@ export default function Footer() {
         {/* Contact Column */}
         <div className="flex flex-col gap-5 text-left">
           <h4 className="font-heading font-bold text-base text-white tracking-wide uppercase">
-            Contact Us
+            Contact
           </h4>
           <div className="flex flex-col gap-4 text-sm text-white/60">
             <div className="flex gap-3">
@@ -145,7 +144,7 @@ export default function Footer() {
       <hr className="border-white/10 max-w-[1440px] mx-auto px-6 md:px-12" />
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-        <p>© {currentYear} [Dental Clinic Name]. All rights reserved.</p>
+        <p>© {currentYear} V.R. Dental Care. All rights reserved.</p>
         <div className="flex items-center gap-6">
           <a href="#" className="hover:text-white transition-colors duration-200">
             Privacy Policy

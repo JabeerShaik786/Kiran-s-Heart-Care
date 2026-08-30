@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Sparkles, Smile, Fingerprint, Shield, Users } from "lucide-react";
+import { Award, Sparkles, Smile, Shield } from "lucide-react";
 
 interface ChooseUsCard {
   id: number;
@@ -14,38 +14,26 @@ const CARDS: ChooseUsCard[] = [
   {
     id: 1,
     icon: Award,
-    title: "Experienced Dental Care",
-    description: "Led by qualified dental practitioners with extensive experience in preventive, restorative, and cosmetic therapies.",
+    title: "Experienced Staff",
+    description: "Our team of dental professionals brings years of experience and expertise to every patient interaction.",
   },
   {
     id: 2,
     icon: Sparkles,
-    title: "Modern Dental Technology",
-    description: "Utilizing digital diagnostics, intraoral cameras, and low-exposure imaging setups to ensure precise diagnosis.",
+    title: "Modern Equipment",
+    description: "We utilize modern dental technology to provide efficient, precise, and comfortable treatments.",
   },
   {
     id: 3,
     icon: Smile,
-    title: "Comfortable Treatment",
-    description: "Relaxing suites, gentle clinical approaches, and stress-free care environments designed to reduce dental anxiety.",
+    title: "Comprehensive Care",
+    description: "From routine check-ups to advanced procedures, we offer a wide range of dental services to meet different oral health needs.",
   },
   {
     id: 4,
-    icon: Fingerprint,
-    title: "Personalized Treatment Plans",
-    description: "No standard solutions. Every dental routine, restoration, and aesthetic correction is custom-tailored to your goals.",
-  },
-  {
-    id: 5,
     icon: Shield,
-    title: "Clean & Hygienic Environment",
-    description: "Strict sterilization guidelines, sterile dental instruments, and clean operatories complying with global safety standards.",
-  },
-  {
-    id: 6,
-    icon: Users,
-    title: "Complete Dental Care",
-    description: "From routine checkups and teeth polishing to root canal therapies, implants, and cosmetic aligners under one roof.",
+    title: "Comfortable Facility",
+    description: "Our modern and welcoming clinic is designed to make every dental visit as comfortable and pleasant as possible.",
   },
 ];
 
@@ -93,7 +81,7 @@ export default function WhyChooseUs() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {CARDS.map((card) => {
             const Icon = card.icon;
@@ -102,7 +90,7 @@ export default function WhyChooseUs() {
                 key={card.id}
                 variants={cardVariants}
                 whileHover={{ y: -8, scale: 1.01 }}
-                className="relative group rounded-3xl p-8 bg-white border border-borders/60 shadow-lg shadow-primary/[0.02] hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-start text-left overflow-hidden cursor-pointer"
+                className="relative group rounded-3xl p-8 bg-white border border-borders/60 shadow-lg shadow-primary/[0.02] hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-start text-left overflow-hidden cursor-pointer animate-none"
               >
                 {/* Glowing Corner Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/[0.02] to-secondary/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
