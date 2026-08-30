@@ -2,19 +2,19 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, GraduationCap, Heart, CheckCircle2, ShieldAlert } from "lucide-react";
+import { Award, Sparkles, Smile, CheckCircle2, Shield } from "lucide-react";
 import Image from "next/image";
 
-type TabType = "bio" | "education" | "awards" | "memberships";
+type TabType = "about" | "highlights" | "technology" | "approach";
 
 export default function AboutDoctor() {
-  const [activeTab, setActiveTab] = useState<TabType>("bio");
+  const [activeTab, setActiveTab] = useState<TabType>("about");
 
   const tabs = [
-    { id: "bio", label: "Biography" },
-    { id: "education", label: "Education & Career" },
-    { id: "awards", label: "Awards & Honors" },
-    { id: "memberships", label: "Memberships" },
+    { id: "about", label: "About Clinic" },
+    { id: "highlights", label: "Clinical Highlights" },
+    { id: "technology", label: "Modern Technology" },
+    { id: "approach", label: "Care Approach" },
   ];
 
   return (
@@ -34,11 +34,11 @@ export default function AboutDoctor() {
             whileHover={{ y: -4 }}
             className="lg:col-span-5 relative w-full flex justify-center lg:justify-start group transition-all duration-300"
           >
-            {/* The Doctor Portrait */}
+            {/* The Dentist Portrait */}
             <div className="relative rounded-[24px] overflow-hidden border border-white/60 shadow-[0_30px_80px_rgba(15,23,42,0.12)] group-hover:shadow-[0_40px_90px_rgba(15,23,42,0.18)] transition-all duration-300 aspect-[4/5] w-full max-w-[420px]">
               <Image
-                src="/doctor_portrait.png"
-                alt="Dr. Kiran - Chief Cardiologist"
+                src="/dentist_portrait.jpg"
+                alt="[Dental Clinic Name] Dentist"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -47,12 +47,11 @@ export default function AboutDoctor() {
               {/* Overlay card */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/85 backdrop-blur-md p-5 rounded-[20px] shadow-lg border border-white/30 flex items-start gap-3.5 z-10">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                  <Heart className="w-5 h-5 fill-primary/20 text-primary" />
+                  <Smile className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex flex-col text-left">
-                  <span className="text-base font-extrabold text-slate-800 leading-tight">Dr. Kiran</span>
-                  <span className="text-xs text-slate-600 font-semibold mt-0.5">Chief Interventional Cardiologist</span>
-                  <span className="text-[11px] text-primary font-bold mt-1 tracking-wider uppercase">25+ Years Experience</span>
+                  <span className="text-base font-extrabold text-slate-800 leading-tight">[Dental Clinic Name]</span>
+                  <span className="text-xs text-slate-600 font-semibold mt-0.5">Advanced Dental Care & Smile Center</span>
                 </div>
               </div>
             </div>
@@ -67,16 +66,16 @@ export default function AboutDoctor() {
             className="lg:col-span-7 flex flex-col items-start"
           >
             <span className="text-sm font-bold text-primary uppercase tracking-widest mb-3">
-              Meet Dr. Kiran
+              About Our Clinic
             </span>
             <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight mb-6">
-              A Lifelong Commitment to Heart Health
+              Your Smile, Our Commitment
             </h2>
 
             {/* Mission statement card */}
             <div className="w-full p-6 rounded-2xl bg-gradient-to-r from-primary/[0.03] to-secondary/[0.03] border-l-4 border-primary mb-8">
               <p className="text-base italic text-primary/95 font-medium leading-relaxed">
-                "Our mission is to combine cutting-edge technology with compassionate care to heal hearts and restore life. Every heartbeat is a promise of life, and our goal is to protect it."
+                "Our mission is to provide modern, comfortable, and personalized dental care. We combine advanced dental technology with a gentle, patient-focused approach for healthier and cleaner teeth."
               </p>
             </div>
 
@@ -105,11 +104,11 @@ export default function AboutDoctor() {
             </div>
 
             {/* Tab Panels */}
-            <div className="w-full min-h-[260px] relative">
+            <div className="w-full min-h-[260px] relative text-left">
               <AnimatePresence mode="wait">
-                {activeTab === "bio" && (
+                {activeTab === "about" && (
                   <motion.div
-                    key="bio"
+                    key="about"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -117,20 +116,43 @@ export default function AboutDoctor() {
                     className="flex flex-col gap-4 text-gray-text text-base md:text-lg leading-relaxed font-normal"
                   >
                     <p>
-                      Dr. Kiran is a highly acclaimed, board-certified Senior Consultant Interventional Cardiologist with over 25 years of experience in managing complex cardiovascular conditions.
+                      At [Dental Clinic Name], we are committed to providing dental treatments in a comfortable and stress-free environment. Our experienced dental professionals prioritize your oral health using state-of-the-art diagnostic and clinical equipment.
                     </p>
                     <p>
-                      Recognized for his patient-centered approach, Dr. Kiran has performed over 10,000 successful procedures including coronary angiographies, complex angioplasties (PCI), pacemaker implantations, and device closures. He believes in evidence-based medicine, focusing equally on preventive cardiology and advanced clinical intervention.
-                    </p>
-                    <p>
-                      He is dedicated to making high-quality cardiovascular treatments accessible to all segments of society, and frequently lectures at national and international cardiac conferences.
+                      We believe in a patient-first model of care, taking the time to listen to your concerns and explain treatment options transparently. From preventive care to cosmetic restorations, we customize every care plan to fit your goals.
                     </p>
                   </motion.div>
                 )}
 
-                {activeTab === "education" && (
+                {activeTab === "highlights" && (
                   <motion.div
-                    key="education"
+                    key="highlights"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                  >
+                    {[
+                      { title: "Experienced Professionals", desc: "A team of skilled dental practitioners committed to continuous education." },
+                      { title: "Personalized Care", desc: "We formulate tailored care paths matching your specific clinical requirements." },
+                      { title: "Comfortable Environment", desc: "Suites designed with ergonomics and soothing textures to reduce anxiety." },
+                      { title: "Clean & Sterile Standard", desc: "Strict, multi-layered sterilization protocols exceeding global medical benchmarks." },
+                    ].map((item, idx) => (
+                      <div key={idx} className="p-4 rounded-xl border border-borders/60 hover:border-primary/20 hover:bg-slate-50/50 transition-all duration-200 flex gap-3.5">
+                        <Smile className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                        <div className="flex flex-col">
+                          <h4 className="font-heading font-bold text-sm text-dark-text leading-snug">{item.title}</h4>
+                          <p className="text-xs text-gray-text mt-1 leading-relaxed">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </motion.div>
+                )}
+
+                {activeTab === "technology" && (
+                  <motion.div
+                    key="technology"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -139,72 +161,37 @@ export default function AboutDoctor() {
                   >
                     {[
                       {
-                        year: "1998 - Present",
-                        title: "Chief Interventional Cardiologist",
-                        institution: "Kiran's Heart Care Clinic & Diagnostic Center",
+                        title: "Low-Radiation Digital X-Rays",
+                        desc: "Provides instant high-resolution imaging of tooth structures and jawbones with minimal exposure.",
                       },
                       {
-                        year: "1995 - 1998",
-                        title: "DM in Cardiology",
-                        institution: "All India Institute of Medical Sciences (AIIMS), New Delhi",
+                        title: "Intraoral Cameras",
+                        desc: "Allows patients to see exactly what the dentist sees, aiding clear diagnostics and understanding.",
                       },
                       {
-                        year: "1992 - 1995",
-                        title: "MD in General Medicine",
-                        institution: "Maulana Azad Medical College (MAMC), New Delhi",
-                      },
-                      {
-                        year: "1986 - 1991",
-                        title: "MBBS (Graduation)",
-                        institution: "King George's Medical College (KGMC), Lucknow",
+                        title: "Modern Restorative Materials",
+                        desc: "Utilizing strong, BPA-free, and natural-looking composite materials for bridges, crowns, and fillings.",
                       },
                     ].map((item, idx) => (
                       <div key={idx} className="flex gap-4">
                         <div className="flex flex-col items-center shrink-0">
                           <div className="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                            <GraduationCap className="w-5 h-5" />
+                            <Sparkles className="w-5 h-5" />
                           </div>
-                          {idx !== 3 && <div className="w-[2px] h-12 bg-borders mt-1" />}
+                          {idx !== 2 && <div className="w-[2px] h-12 bg-borders mt-1" />}
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-xs font-bold text-primary uppercase tracking-wider">{item.year}</span>
-                          <span className="text-base font-bold text-dark-text mt-0.5">{item.title}</span>
-                          <span className="text-sm text-gray-text">{item.institution}</span>
+                          <span className="text-base font-bold text-dark-text">{item.title}</span>
+                          <span className="text-sm text-gray-text mt-0.5">{item.desc}</span>
                         </div>
                       </div>
                     ))}
                   </motion.div>
                 )}
 
-                {activeTab === "awards" && (
+                {activeTab === "approach" && (
                   <motion.div
-                    key="awards"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                  >
-                    {[
-                      { title: "Best Cardiologist of the Year", desc: "Awarded by the National Health Association for clinical excellence." },
-                      { title: "Lifesaver Gold Medal", desc: "For performing over 1,000 successful emergency angioplasties in a single year." },
-                      { title: "Outstanding Research Award", desc: "Recognized for publications on preventive heart health in South Asian populations." },
-                      { title: "Distinguished Service Award", desc: "For conducting over 200 free rural cardiac health screening camps." },
-                    ].map((award, idx) => (
-                      <div key={idx} className="p-4 rounded-xl border border-borders/60 hover:border-primary/20 hover:bg-slate-50/50 transition-all duration-200 flex gap-3.5">
-                        <Award className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                        <div className="flex flex-col">
-                          <h4 className="font-heading font-bold text-sm text-dark-text leading-snug">{award.title}</h4>
-                          <p className="text-xs text-gray-text mt-1 leading-relaxed">{award.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </motion.div>
-                )}
-
-                {activeTab === "memberships" && (
-                  <motion.div
-                    key="memberships"
+                    key="approach"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -212,12 +199,12 @@ export default function AboutDoctor() {
                     className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base font-semibold text-dark-text/80"
                   >
                     {[
-                      "Fellow of the Cardiological Society of India (CSI)",
-                      "Member of the European Society of Cardiology (ESC)",
-                      "Associate of the American College of Cardiology (ACC)",
-                      "Life Member of the Association of Physicians of India (API)",
-                      "Executive Board Member - National Cardiac Forum",
-                      "International Member - Society for Cardiovascular Angiography & Interventions (SCAI)",
+                      "Strong focus on preventive education",
+                      "Restorative treatments to preserve natural teeth",
+                      "Cosmetic dentistry for self-confidence",
+                      "Gentle and child-friendly dental care",
+                      "Evidence-based treatment protocols",
+                      "Continuous tracking and follow-up support",
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-center gap-3 p-3.5 rounded-xl border border-borders/40">
                         <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />

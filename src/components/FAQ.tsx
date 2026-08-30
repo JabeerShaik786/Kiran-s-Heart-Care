@@ -13,33 +13,33 @@ interface FAQItem {
 const FAQS: FAQItem[] = [
   {
     id: 1,
-    question: "What are the common warning signs of a heart attack?",
-    answer: "Common warning signs include heavy chest pressure, squeezing or aching discomfort in the center of the chest, pain radiating to the jaw, neck, back, or left arm, shortness of breath, unexplained cold sweats, and dizziness. If you experience these symptoms, call our emergency hotline (+91 98765 01234) immediately.",
+    question: "How often should I visit the dentist for a routine checkup?",
+    answer: "We recommend visiting the dentist at least once every 6 months for a comprehensive exam and professional cleaning. Regular visits prevent plaque build-up, check for early signs of decay, and keep your gums healthy.",
   },
   {
     id: 2,
-    question: "How often should I get a cardiac health check-up?",
-    answer: "For healthy adults above 35 years, an annual check-up including blood pressure, lipid profile, and an ECG is recommended. If you have risk factors such as diabetes, smoking, obesity, high cholesterol, or a family history of early heart attacks, you should get checked every 6 months or as prescribed by Dr. Kiran.",
+    question: "Are root canal treatments painful?",
+    answer: "No. With modern local anesthetics and advanced treatment techniques, root canal therapy is extremely comfortable. Most patients describe the sensation as being no different from receiving a standard cavity filling.",
   },
   {
     id: 3,
-    question: "What is the difference between Angiography and Angioplasty?",
-    answer: "Angiography is purely a diagnostic test where a contrast dye and X-rays are used to visualize and map blockages in the arteries. Angioplasty (PCI) is the actual treatment procedure where the detected blockages are opened using balloon expansion and stabilized by inserting a drug-eluting stent.",
+    question: "What is the difference between dental implants and dentures?",
+    answer: "Dental implants are titanium posts surgically anchored into the jawbone, functioning as stable, permanent artificial tooth roots topped with ceramic crowns. Dentures are removable dental appliances that rest on top of the gums and require daily removal.",
   },
   {
     id: 4,
-    question: "Is a referral required to book an appointment with Dr. Kiran?",
-    answer: "No, a referral is not mandatory. You can directly book an appointment through our website or by calling our clinic. If you have been referred by another physician, please carry the referral letter and all previous lab reports for review.",
+    question: "Is a referral required to book an appointment?",
+    answer: "No, you do not need a physician's referral to consult with us. You can book directly using our website appointment form or by contacting our front desk phone line.",
   },
   {
     id: 5,
-    question: "What insurance plans do you accept for treatments?",
-    answer: "We accept all major national health insurance providers and TPA desks. Cashless treatment facility is available for planned surgeries (like Angioplasty or Pacemaker implants) subject to pre-authorization approval from your insurer. Our desk handles the documentation for you.",
+    question: "What counts as a dental emergency?",
+    answer: "Dental emergencies include knocked-out teeth, severe dental pain, facial swelling, cracked or broken restorations, or uncontrolled oral bleeding. Contact our clinic immediately if you experience any of these symptoms.",
   },
   {
     id: 6,
-    question: "How can I prepare for a Treadmill Test (TMT)?",
-    answer: "To prepare for a TMT, wear comfortable walking shoes and loose-fitting athletic clothing. Do not eat a heavy meal, drink caffeine, or smoke for at least 2 hours before the test. Continue your regular medications unless Dr. Kiran specifically advises you to pause them (e.g., beta-blockers).",
+    question: "How should I prepare for my first dental checkup?",
+    answer: "Simply brush and floss your teeth before your visit. Bring a list of any medications you are taking, and arrive 10 minutes early to review your dental history details with our administrative team.",
   },
 ];
 
@@ -88,10 +88,10 @@ export default function FAQ() {
             FAQ
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight mb-6">
-            Frequently Asked Cardiac Questions
+            Frequently Asked Dental Questions
           </h2>
           <p className="text-gray-text text-base md:text-lg font-normal leading-relaxed mb-8">
-            Can't find the answer you're looking for? Reach out to our front desk team at any time. We are here to assist you with scheduling, clinical questions, or insurance support.
+            Can't find the answer you're looking for? Reach out to our front desk team at any time. We are here to assist you with scheduling, clinical questions, or payment support.
           </p>
           <a
             href="#contact"

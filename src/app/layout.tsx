@@ -15,37 +15,37 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kiran's Heart Care | Premium Cardiac Diagnostics & Advanced Cardiology Center",
-  description: "Experience world-class cardiac care under Dr. Kiran. Specializing in advanced diagnostics, non-invasive cardiology, angiography, angioplasty, and patient-centered recovery. 25+ years of clinical excellence.",
+  title: "[Dental Clinic Name] | Premium Dental Care & Smile Center",
+  description: "Experience modern, comfortable, and personalized dental care at [Dental Clinic Name]. Specializing in preventive hygiene, teeth cleaning, root canal therapy, dental implants, teeth whitening, clear aligners, and aesthetic smile design.",
   keywords: [
-    "Kiran Heart Care",
-    "Cardiologist",
-    "Heart specialist",
-    "Angiography",
-    "Angioplasty",
-    "2D Echo",
-    "TMT test",
-    "Holter monitoring",
-    "Heart attack treatment",
-    "Best cardiologist",
+    "[Dental Clinic Name]",
+    "Dentist",
+    "Dental Clinic",
+    "Root Canal Treatment",
+    "Dental Implants",
+    "Teeth Whitening",
+    "Teeth Cleaning & Polishing",
+    "Clear Aligners & Braces",
+    "Cosmetic Dentistry",
+    "Pediatric Dentist",
   ],
-  authors: [{ name: "Dr. Kiran", url: "https://kiransheartcare.com" }],
+  authors: [{ name: "[Dental Clinic Name]" }],
   openGraph: {
-    title: "Kiran's Heart Care | Advanced Cardiology Services",
-    description: "Expert cardiac diagnostic and treatment options with a compassionate, patient-first approach. 25+ years of trusted cardiac care.",
+    title: "[Dental Clinic Name] | Advanced Dental Care & Smile Center",
+    description: "Expert dental diagnostic and treatment options with a compassionate, patient-first approach.",
     type: "website",
     locale: "en_US",
-    siteName: "Kiran's Heart Care",
+    siteName: "[Dental Clinic Name]",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kiran's Heart Care",
-    description: "Advanced Cardiology & Compassionate Heart Care Services.",
+    title: "[Dental Clinic Name]",
+    description: "Advanced Dental Care & Smile Center.",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0F4C81",
+  themeColor: "#0D9488",
   width: "device-width",
   initialScale: 1,
 };

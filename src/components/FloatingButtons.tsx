@@ -20,7 +20,7 @@ export default function FloatingButtons() {
     <>
       {/* Floating WhatsApp Button - Desktop & Mobile */}
       <motion.a
-        href="https://wa.me/919876543210"
+        href="https://wa.me/[Clinic Phone Number]"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, opacity: 0 }}
@@ -44,7 +44,7 @@ export default function FloatingButtons() {
       {/* Sticky Call & Book Buttons on Mobile Only */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-xl border-t border-borders px-4 py-3 flex gap-3 shadow-2xl">
         <a
-          href="tel:+919876543210"
+          href="tel:[Clinic Phone Number]"
           className="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-primary/20 text-primary font-bold text-xs rounded-2xl hover:bg-primary/5 active:bg-primary/10 transition-all duration-200"
         >
           <Phone className="w-4 h-4 text-primary" />

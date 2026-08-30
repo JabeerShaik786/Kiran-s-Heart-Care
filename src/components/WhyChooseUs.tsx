@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, ShieldAlert, Fingerprint, ClipboardCheck, Landmark, HeartHandshake } from "lucide-react";
+import { Award, Sparkles, Smile, Fingerprint, Shield, Users } from "lucide-react";
 
 interface ChooseUsCard {
   id: number;
@@ -14,38 +14,38 @@ const CARDS: ChooseUsCard[] = [
   {
     id: 1,
     icon: Award,
-    title: "Experienced Cardiologist",
-    description: "Led by Dr. Kiran with over 25 years of experience in interventional cardiology and thousands of successful procedures.",
+    title: "Experienced Dental Care",
+    description: "Led by qualified dental practitioners with extensive experience in preventive, restorative, and cosmetic therapies.",
   },
   {
     id: 2,
-    icon: ShieldAlert,
-    title: "Advanced Diagnostics",
-    description: "Full suite of non-invasive cardiac testing equipment including digital TMT, ECG, and color doppler 2D echocardiography.",
+    icon: Sparkles,
+    title: "Modern Dental Technology",
+    description: "Utilizing digital diagnostics, intraoral cameras, and low-exposure imaging setups to ensure precise diagnosis.",
   },
   {
     id: 3,
-    icon: Fingerprint,
-    title: "Personalized Treatment",
-    description: "No generic protocols. Every therapy, rehabilitation routine, and prescription is custom-tailored to your unique health profile.",
+    icon: Smile,
+    title: "Comfortable Treatment",
+    description: "Relaxing suites, gentle clinical approaches, and stress-free care environments designed to reduce dental anxiety.",
   },
   {
     id: 4,
-    icon: ClipboardCheck,
-    title: "Evidence-Based Care",
-    description: "Clinical guidelines sourced from American Heart Association (AHA) and European Society of Cardiology (ESC) protocols.",
+    icon: Fingerprint,
+    title: "Personalized Treatment Plans",
+    description: "No standard solutions. Every dental routine, restoration, and aesthetic correction is custom-tailored to your goals.",
   },
   {
     id: 5,
-    icon: Landmark,
-    title: "Modern Facilities",
-    description: "Premium hospital interior designed for patient comfort, including sterilised outpatient consulting rooms and emergency bays.",
+    icon: Shield,
+    title: "Clean & Hygienic Environment",
+    description: "Strict sterilization guidelines, sterile dental instruments, and clean operatories complying with global safety standards.",
   },
   {
     id: 6,
-    icon: HeartHandshake,
-    title: "Compassionate Support",
-    description: "Our dedicated care coordinators support you from consultation through diagnosis, scheduling, recovery, and home care.",
+    icon: Users,
+    title: "Complete Dental Care",
+    description: "From routine checkups and teeth polishing to root canal therapies, implants, and cosmetic aligners under one roof.",
   },
 ];
 
@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
-            Setting the Benchmark for Cardiac Excellence
+            Setting the Benchmark for Smile Excellence
           </h2>
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>

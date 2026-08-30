@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarCheck, Stethoscope, ClipboardList, ShieldPlus, Heart, Activity } from "lucide-react";
+import { CalendarCheck, Smile, ClipboardList, ShieldPlus, Sparkles, Activity } from "lucide-react";
 
 interface Step {
   id: number;
@@ -15,37 +15,37 @@ const STEPS: Step[] = [
     id: 1,
     icon: CalendarCheck,
     title: "Book Appointment",
-    desc: "Easily schedule your consultation online or call our dedicated emergency cardiac helpline.",
+    desc: "Easily schedule your consultation online or call our friendly dental front desk.",
   },
   {
     id: 2,
-    icon: Stethoscope,
-    title: "Consultation",
-    desc: "Meet Dr. Kiran for an in-depth review of your medical history, symptoms, and lifestyle.",
+    icon: Smile,
+    title: "Dental Consultation",
+    desc: "Meet our dental team for an in-depth review of your teeth health, goals, and history.",
   },
   {
     id: 3,
     icon: ClipboardList,
-    title: "Precision Diagnosis",
-    desc: "Undergo high-precision diagnostic tests (ECG, 2D Echo, TMT) right inside our modern facility.",
+    title: "Diagnosis",
+    desc: "Undergo low-exposure digital X-rays and intraoral scans to identify clinical issues.",
   },
   {
     id: 4,
     icon: ShieldPlus,
-    title: "Tailored Treatment",
-    desc: "Receive an evidence-based care plan, spanning medications, life therapy, or interventional stenting.",
+    title: "Personalized Treatment Plan",
+    desc: "Receive a customized dental care plan outline covering preventive, restorative, or aesthetic treatments.",
   },
   {
     id: 5,
-    icon: Heart,
-    title: "Supervised Recovery",
-    desc: "Follow a personalized cardiac rehabilitation program with step-by-step guidance.",
+    icon: Sparkles,
+    title: "Dental Treatment",
+    desc: "Undergo your dental procedure utilizing gentle techniques and modern clinical equipment.",
   },
   {
     id: 6,
     icon: Activity,
     title: "Follow-Up Care",
-    desc: "Attend regular follow-up checks to monitor progress and maintain long-term cardiac wellness.",
+    desc: "Receive hygiene guidelines and attend routine dental checkups to sustain a healthy smile.",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function PatientJourney() {
             Patient Path
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
-            Your Journey to a Stronger, Healthier Heart
+            Your Journey to a Healthy, Bright Smile
           </h2>
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, ShieldAlert, CheckCircle, Send, Calendar, Heart } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle, Send, Calendar, Smile } from "lucide-react";
 import Image from "next/image";
 
 interface BookingFormData {
@@ -11,6 +11,7 @@ interface BookingFormData {
   phone: string;
   email: string;
   date: string;
+  time: string;
   service: string;
   message: string;
 }
@@ -19,38 +20,22 @@ interface ContactCardProps {
   icon: React.ElementType;
   title: string;
   details: string;
-  isEmergency?: boolean;
 }
 
-function ContactCard({ icon: Icon, title, details, isEmergency = false }: ContactCardProps) {
+function ContactCard({ icon: Icon, title, details }: ContactCardProps) {
   return (
     <motion.div
       whileHover={{ y: -4 }}
-      className={`p-5 rounded-[18px] border transition-all duration-300 flex items-start gap-4 ${
-        isEmergency
-          ? "bg-red-500/5 border-red-500/20 shadow-md shadow-red-500/[0.02]"
-          : "bg-white border-borders/50 shadow-sm hover:shadow-md hover:border-primary/10"
-      }`}
+      className="p-5 rounded-[18px] border transition-all duration-300 flex items-start gap-4 bg-white border-borders/50 shadow-sm hover:shadow-md hover:border-primary/10"
     >
-      <div
-        className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${
-          isEmergency ? "bg-red-500 text-white animate-pulse" : "bg-primary/5 text-primary"
-        }`}
-      >
+      <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 bg-primary/5 text-primary">
         <Icon className="w-5 h-5" />
       </div>
       <div className="flex flex-col text-left">
-        <span className={`text-[10px] font-bold uppercase tracking-wider ${isEmergency ? "text-red-500" : "text-gray-text"}`}>
+        <span className="text-[10px] font-bold uppercase tracking-wider text-gray-text">
           {title}
         </span>
-        {isEmergency ? (
-          <a
-            href={`tel:${details.replace(/\s+/g, "")}`}
-            className="text-lg font-extrabold text-red-600 mt-1 hover:underline"
-          >
-            {details}
-          </a>
-        ) : title === "Email" ? (
+        {title === "Email" ? (
           <a
             href={`mailto:${details}`}
             className="text-sm font-semibold text-dark-text mt-1 hover:text-primary transition-colors"
@@ -59,7 +44,7 @@ function ContactCard({ icon: Icon, title, details, isEmergency = false }: Contac
           </a>
         ) : title === "Reception & Booking" ? (
           <a
-            href={`tel:${details.replace(/\s+/g, "")}`}
+            href={`tel:${details}`}
             className="text-sm font-semibold text-dark-text mt-1 hover:text-primary transition-colors"
           >
             {details}
@@ -97,7 +82,7 @@ export default function ContactSection() {
       <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] bg-secondary/5 blur-[100px] rounded-full pointer-events-none" />
 
-      {/* SECTION 1: Doctor Image + Appointment Booking Form */}
+      {/* SECTION 1: Dentist Image + Appointment Booking Form */}
       <div className="max-w-[1320px] mx-auto px-6 md:px-8">
         
         {/* Section Heading */}
@@ -106,7 +91,7 @@ export default function ContactSection() {
             Appointment Booking
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
-            Schedule Your Cardiac Consultation
+            Book Your Dental Appointment
           </h2>
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>
@@ -125,8 +110,8 @@ export default function ContactSection() {
           >
             <div className="relative rounded-[24px] overflow-hidden border border-white/60 shadow-[0_30px_80px_rgba(15,23,42,0.12)] group-hover:shadow-[0_40px_90px_rgba(15,23,42,0.18)] transition-all duration-300 aspect-[4/5] w-full max-w-[420px]">
               <Image
-                src="/doctor_portrait.png"
-                alt="Dr. Kiran - Chief Cardiologist"
+                src="/dentist_portrait.jpg"
+                alt="Clinic Dentist Portrait"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -135,12 +120,12 @@ export default function ContactSection() {
               {/* Floating glass info card */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/85 backdrop-blur-md p-5 rounded-[20px] shadow-lg border border-white/30 flex items-start gap-3.5 z-10">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                  <Heart className="w-5 h-5 fill-primary/20 text-primary" />
+                  <Smile className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex flex-col text-left">
-                  <span className="text-base font-extrabold text-slate-800 leading-tight">Dr. Kiran</span>
-                  <span className="text-xs text-slate-600 font-semibold mt-0.5">Chief Interventional Cardiologist</span>
-                  <span className="text-[11px] text-slate-500 font-bold mt-0.5">DM Cardiology</span>
+                  <span className="text-base font-extrabold text-slate-800 leading-tight">[Dental Clinic Name]</span>
+                  <span className="text-xs text-slate-600 font-semibold mt-0.5">Chief Dentist & Surgeon</span>
+                  <span className="text-[11px] text-slate-500 font-bold mt-0.5">Smile Design & Restorative Care</span>
                   <span className="text-[11px] text-primary font-bold mt-1 tracking-wider uppercase">25+ Years Experience</span>
                 </div>
               </div>
@@ -161,10 +146,10 @@ export default function ContactSection() {
                     transition={{ duration: 0.3 }}
                   >
                     <h3 className="font-heading font-extrabold text-3xl text-dark-text tracking-tight mb-2 text-left">
-                      Book an Appointment
+                      Book Your Dental Appointment
                     </h3>
                     <p className="text-sm text-gray-text font-normal leading-relaxed text-left mb-8">
-                      Select your preferred date and service. Our front desk will contact you via phone within 2 hours to confirm your consultation slot.
+                      Take the first step towards a healthier and more confident smile. Schedule your dental consultation today.
                     </p>
 
                     <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
@@ -249,10 +234,28 @@ export default function ContactSection() {
                         )}
                       </div>
 
-                      {/* Service Category */}
+                      {/* Preferred Time (NEW Field!) */}
                       <div className="flex flex-col">
+                        <label htmlFor="time" className="text-xs font-bold text-dark-text uppercase tracking-wider mb-2">
+                          Preferred Time *
+                        </label>
+                        <input
+                          id="time"
+                          type="time"
+                          className={`w-full h-14 px-5 rounded-2xl bg-[#F8FAFC] border text-sm font-semibold focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-300 ${
+                            errors.time ? "border-red-500" : "border-borders/60"
+                          }`}
+                          {...register("time", { required: "Please select a time slot" })}
+                        />
+                        {errors.time && (
+                          <span className="text-xs text-red-500 mt-1.5 font-bold">{errors.time.message}</span>
+                        )}
+                      </div>
+
+                      {/* Service Category */}
+                      <div className="sm:col-span-2 flex flex-col">
                         <label htmlFor="service" className="text-xs font-bold text-dark-text uppercase tracking-wider mb-2">
-                          Required Service *
+                          Dental Service *
                         </label>
                         <select
                           id="service"
@@ -260,34 +263,36 @@ export default function ContactSection() {
                             errors.service ? "border-red-500" : "border-borders/60"
                           }`}
                           defaultValue=""
-                          {...register("service", { required: "Please select a service" })}
+                          {...register("service", { required: "Please select a dental service" })}
                         >
-                          <option value="" disabled>Select cardiac service</option>
-                          <option value="consultation">General Consultation</option>
-                          <option value="angiography">Coronary Angiography</option>
-                          <option value="angioplasty">Coronary Angioplasty (PCI)</option>
-                          <option value="ecg">Electrocardiogram (ECG)</option>
-                          <option value="echo">2D Echocardiography</option>
-                          <option value="tmt">Treadmill Test (TMT)</option>
-                          <option value="holter">Holter Monitoring (24-48h)</option>
-                          <option value="hypertension">Hypertension Check</option>
-                          <option value="preventive">Preventive Cardiology</option>
+                          <option value="" disabled>Select dental service</option>
+                          <option value="general">General Dentistry</option>
+                          <option value="cleaning">Teeth Cleaning & Polishing</option>
+                          <option value="rootcanal">Root Canal Treatment</option>
+                          <option value="implants">Dental Implants</option>
+                          <option value="whitening">Teeth Whitening</option>
+                          <option value="crowns">Crowns & Bridges</option>
+                          <option value="braces">Braces & Aligners</option>
+                          <option value="cosmetic">Cosmetic Dentistry</option>
+                          <option value="pediatric">Pediatric Dentistry</option>
+                          <option value="wisdom">Wisdom Tooth Treatment</option>
+                          <option value="other">Other Concern</option>
                         </select>
                         {errors.service && (
                           <span className="text-xs text-red-500 mt-1.5 font-bold">{errors.service.message}</span>
                         )}
                       </div>
 
-                      {/* Message */}
+                      {/* Message / Dental Concern */}
                       <div className="sm:col-span-2 flex flex-col">
                         <label htmlFor="message" className="text-xs font-bold text-dark-text uppercase tracking-wider mb-2">
-                          Symptoms / Remarks (Optional)
+                          Dental Concern / Message (Optional)
                         </label>
                         <textarea
                           id="message"
                           rows={3}
-                          placeholder="Describe any symptoms, previous medical history, or referral notes..."
-                          className="w-full p-5 rounded-2xl bg-[#F8FAFC] border border-borders/60 text-sm font-semibold focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-300 resize-none"
+                          placeholder="Describe any symptoms, pain location, cosmetic goals, or questions..."
+                          className="w-full p-5 rounded-2xl bg-[#F8FAFC] border border-borders/60 text-sm font-semibold focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-300 resize-none animate-none"
                           {...register("message")}
                         />
                       </div>
@@ -297,14 +302,14 @@ export default function ContactSection() {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full h-14 bg-gradient-to-r from-primary to-secondary hover:from-[#0B3D66] hover:to-[#1774C4] text-white font-bold text-base rounded-2xl shadow-lg shadow-primary/15 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 flex items-center justify-center gap-2.5 disabled:opacity-75 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+                          className="w-full h-14 bg-gradient-to-r from-primary to-secondary hover:from-[#096d68] hover:to-[#0c8ab2] text-white font-bold text-base rounded-2xl shadow-lg shadow-primary/15 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 flex items-center justify-center gap-2.5 disabled:opacity-75 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
                         >
                           {isSubmitting ? (
                             <span className="w-5 h-5 rounded-full border-2 border-white border-t-transparent animate-spin" />
                           ) : (
                             <>
                               <Send className="w-5 h-5 text-white" />
-                              <span>Confirm Appointment Request</span>
+                              <span>Book Appointment</span>
                             </>
                           )}
                         </button>
@@ -328,7 +333,7 @@ export default function ContactSection() {
                     </h3>
                     
                     <p className="text-base text-gray-text max-w-md leading-relaxed font-normal mb-8">
-                      Thank you for choosing Kiran's Heart Care. Our clinical team has received your request and will call you back at your provided phone number within the next <strong>2 hours</strong> to confirm your slot.
+                      Thank you for choosing [Dental Clinic Name]. Our clinical team has received your request and will call you back at your provided phone number within the next <strong>2 hours</strong> to confirm your slot.
                     </p>
                     
                     <div className="p-4 rounded-2xl bg-slate-50 border border-borders/60 flex items-center gap-3 text-left w-full max-w-sm mb-8">
@@ -337,7 +342,7 @@ export default function ContactSection() {
                         A confirmation SMS and email summary have been sent.
                       </span>
                     </div>
-
+                    
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className="px-6 py-2.5 rounded-xl border border-borders bg-white font-bold text-xs text-gray-text hover:bg-slate-50 transition-all cursor-pointer"
@@ -367,7 +372,7 @@ export default function ContactSection() {
             className="lg:col-span-8 w-full rounded-[24px] overflow-hidden shadow-[0_15px_50px_rgba(15,23,42,0.05)] border border-borders relative h-[450px]"
           >
             <iframe
-              title="Kiran Heart Care Clinic Map Location"
+              title="Dental Clinic Map Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.562013898165!2d77.21822357618956!3d28.613939075674287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sCentral%20Park!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               className="absolute inset-0 w-full h-full border-none"
               loading="lazy"
@@ -380,28 +385,22 @@ export default function ContactSection() {
             <ContactCard
               icon={MapPin}
               title="Clinic Address"
-              details="123, Luxury Medical Plaza, Sector 4, Opposite Central Park, New Delhi - 110001"
+              details="[Clinic Address]"
             />
             <ContactCard
               icon={Phone}
               title="Reception & Booking"
-              details="+91 98765 43210"
+              details="[Clinic Phone Number]"
             />
             <ContactCard
               icon={Mail}
               title="Email"
-              details="info@kiransheartcare.com"
+              details="[Clinic Email]"
             />
             <ContactCard
               icon={Clock}
               title="Consultation Hours"
-              details="Monday - Saturday: 9:00 AM - 7:00 PM | Sunday: Closed"
-            />
-            <ContactCard
-              icon={ShieldAlert}
-              title="Emergency Hotline"
-              details="+91 98765 01234"
-              isEmergency={true}
+              details="Monday – Saturday: 9:00 AM – 8:00 PM | Sunday: Closed"
             />
           </div>
 

@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Services from "@/components/Services";
 import PatientJourney from "@/components/PatientJourney";
 import Testimonials from "@/components/Testimonials";
+import Blog from "@/components/Blog";
 import FAQ from "@/components/FAQ";
 import AppointmentCTA from "@/components/AppointmentCTA";
 import ContactSection from "@/components/ContactSection";
@@ -24,6 +25,7 @@ export default function Home() {
         <Services />
         <PatientJourney />
         <Testimonials />
+        <Blog />
         <FAQ />
         <AppointmentCTA />
         <ContactSection />

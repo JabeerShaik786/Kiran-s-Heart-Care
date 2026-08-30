@@ -1,6 +1,6 @@
 "use client";
 
-import { Heart, Mail, MapPin, Phone, MessageSquare, ShieldAlert } from "lucide-react";
+import { Smile, Mail, MapPin, Phone, MessageSquare, Clock } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -28,40 +28,41 @@ export default function Footer() {
         <div className="flex flex-col gap-6">
           <a href="#home" className="flex items-center gap-2 group cursor-pointer">
             <div className="w-10 h-10 rounded-full bg-primary/20 text-accent flex items-center justify-center">
-              <Heart className="w-5 h-5 fill-accent/20" />
+              <Smile className="w-5 h-5 text-accent" />
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-lg tracking-tight text-white leading-tight">
-                KIRAN
+              <span className="font-heading font-extrabold text-lg tracking-tight text-white leading-tight uppercase">
+                [Dental Clinic Name]
               </span>
-              <span className="font-sans font-medium text-[10px] tracking-[0.15em] text-accent uppercase leading-none">
-                Heart Care
+              <span className="font-sans font-medium text-[9px] tracking-[0.1em] text-accent uppercase leading-none mt-0.5">
+                Advanced Smile Center
               </span>
             </div>
           </a>
-          <p className="text-white/60 text-sm leading-relaxed max-w-sm">
-            Providing premium, compassionate, and advanced cardiology care under the supervision of Dr. Kiran. Committed to clinical excellence and a healthier heart for every patient.
+          <p className="text-white/60 text-sm leading-relaxed max-w-sm text-left">
+            [Dental Clinic Name] — Advanced Dental Care & Smile Center. Providing modern, comfortable, and personalized dental care for healthier smiles.
           </p>
           <div className="flex items-center gap-3">
-            <span className="text-[12px] bg-red-500/20 text-red-400 px-3.5 py-1 rounded-full font-semibold border border-red-500/10 flex items-center gap-1.5">
-              <ShieldAlert className="w-3.5 h-3.5" />
-              24/7 Cardiac Emergency Support
+            <span className="text-[12px] bg-primary/20 text-accent px-3.5 py-1 rounded-full font-semibold border border-primary/10 flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5" />
+              Hours: Mon – Sat (9am – 8pm)
             </span>
           </div>
         </div>
 
         {/* Quick Links Column */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 text-left">
           <h4 className="font-heading font-bold text-base text-white tracking-wide uppercase">
-            Quick Navigation
+            Navigation
           </h4>
           <ul className="flex flex-col gap-3.5 text-sm text-white/60">
             {[
               { name: "Home", href: "#home" },
-              { name: "About Dr. Kiran", href: "#about" },
-              { name: "Heart Care Services", href: "#services" },
-              { name: "Patient Stories", href: "#testimonials" },
-              { name: "Frequently Asked Questions", href: "#faq" },
+              { name: "Services", href: "#services" },
+              { name: "About Us", href: "#about" },
+              { name: "Blog / Articles", href: "#blog" },
+              { name: "Contact Us", href: "#contact" },
+              { name: "Book Appointment", href: "#contact" },
             ].map((link) => (
               <li key={link.name}>
                 <a
@@ -77,19 +78,19 @@ export default function Footer() {
         </div>
 
         {/* Services Column */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 text-left">
           <h4 className="font-heading font-bold text-base text-white tracking-wide uppercase">
-            Key Services
+            Services
           </h4>
           <ul className="flex flex-col gap-3.5 text-sm text-white/60">
             {[
-              { name: "Angiography & Angioplasty", href: "#services" },
-              { name: "2D Echocardiography", href: "#services" },
-              { name: "Treadmill Test (TMT)", href: "#services" },
-              { name: "Holter Monitoring", href: "#services" },
-              { name: "Preventive Cardiology", href: "#services" },
-              { name: "Hypertension Management", href: "#services" },
-              { name: "Diabetes & Heart Care", href: "#services" },
+              { name: "General Dentistry", href: "#services" },
+              { name: "Teeth Cleaning & Polishing", href: "#services" },
+              { name: "Root Canal Treatment", href: "#services" },
+              { name: "Dental Implants", href: "#services" },
+              { name: "Teeth Whitening", href: "#services" },
+              { name: "Crowns & Bridges", href: "#services" },
+              { name: "Braces & Aligners", href: "#services" },
             ].map((link) => (
               <li key={link.name}>
                 <a
@@ -105,40 +106,31 @@ export default function Footer() {
         </div>
 
         {/* Contact Column */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 text-left">
           <h4 className="font-heading font-bold text-base text-white tracking-wide uppercase">
-            Contact Clinic
+            Contact Us
           </h4>
           <div className="flex flex-col gap-4 text-sm text-white/60">
             <div className="flex gap-3">
               <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <span>
-                123, Luxury Medical Plaza, Sector 4,
-                <br />
-                Opposite Central Park, New Delhi - 110001
-              </span>
+              <span>[Clinic Address]</span>
             </div>
             <div className="flex gap-3">
               <Phone className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <div className="flex flex-col">
-                <a href="tel:+919876543210" className="hover:text-white transition-colors">
-                  +91 98765 43210
-                </a>
-                <a href="tel:+919876501234" className="hover:text-white transition-colors text-red-400 font-semibold mt-0.5">
-                  +91 98765 01234 (Emergency)
-                </a>
-              </div>
+              <a href="tel:[Clinic Phone Number]" className="hover:text-white transition-colors">
+                [Clinic Phone Number]
+              </a>
             </div>
             <div className="flex gap-3">
               <Mail className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <a href="mailto:info@kiransheartcare.com" className="hover:text-white transition-colors break-all">
-                info@kiransheartcare.com
+              <a href="mailto:[Clinic Email]" className="hover:text-white transition-colors break-all">
+                [Clinic Email]
               </a>
             </div>
             <div className="flex gap-3">
               <MessageSquare className="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/[Clinic Phone Number]"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -153,7 +145,7 @@ export default function Footer() {
       <hr className="border-white/10 max-w-[1440px] mx-auto px-6 md:px-12" />
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-        <p>© {currentYear} Kiran's Heart Care. All rights reserved.</p>
+        <p>© {currentYear} [Dental Clinic Name]. All rights reserved.</p>
         <div className="flex items-center gap-6">
           <a href="#" className="hover:text-white transition-colors duration-200">
             Privacy Policy

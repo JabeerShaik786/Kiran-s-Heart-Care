@@ -2,14 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Heart, Phone } from "lucide-react";
+import { Menu, X, Smile, Phone } from "lucide-react";
 
 const NAV_ITEMS = [
   { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Patient Stories", href: "#testimonials" },
-  { name: "FAQ", href: "#faq" },
+  { name: "About", href: "#about" },
+  { name: "Blog", href: "#blog" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -76,15 +75,15 @@ export default function Navbar() {
                     ease: "easeInOut",
                   }}
                 >
-                  <Heart className="w-4 h-4 fill-primary/20 text-primary" />
+                  <Smile className="w-4 h-4 text-primary" />
                 </motion.div>
               </div>
               <div className="flex flex-col text-left">
-                <span className="font-heading font-extrabold text-sm md:text-base tracking-tight text-primary leading-tight">
-                  KIRAN
+                <span className="font-heading font-extrabold text-[12px] md:text-sm tracking-tight text-primary leading-tight uppercase">
+                  [Dental Clinic Name]
                 </span>
-                <span className="font-sans font-medium text-[8px] tracking-[0.15em] text-gray-text uppercase leading-none">
-                  Heart Care
+                <span className="font-sans font-medium text-[7px] tracking-[0.1em] text-gray-text uppercase leading-none mt-0.5">
+                  Advanced Dental Care
                 </span>
               </div>
             </a>
@@ -108,11 +107,11 @@ export default function Navbar() {
           {/* Contact & CTA Section (Right Column) */}
           <div className="hidden lg:flex items-center gap-6 flex-shrink-0">
             <a
-              href="tel:+919876543210"
+              href="tel:[Clinic Phone Number]"
               className="flex items-center gap-2 text-[16px] font-sans font-medium text-[#334155] hover:text-primary transition-colors duration-200 whitespace-nowrap"
             >
               <Phone className="w-4 h-4 text-slate-500" />
-              <span>+91 98765 43210</span>
+              <span>[Clinic Phone Number]</span>
             </a>
             <a
               href="#contact"
@@ -126,7 +125,7 @@ export default function Navbar() {
           {/* Mobile Menu Actions */}
           <div className="flex lg:hidden items-center gap-4">
             <a
-              href="tel:+919876543210"
+              href="tel:[Clinic Phone Number]"
               className="p-2.5 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors duration-200"
             >
               <Phone className="w-4 h-4" />
@@ -169,11 +168,11 @@ export default function Navbar() {
 
             <div className="flex flex-col gap-4">
               <a
-                href="tel:+919876543210"
+                href="tel:[Clinic Phone Number]"
                 className="flex items-center justify-center gap-3 py-3 rounded-2xl border border-primary/20 text-primary font-semibold text-sm hover:bg-primary/5 transition-colors duration-200"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call +91 98765 43210</span>
+                <span>Call [Clinic Phone Number]</span>
               </a>
               <a
                 href="#contact"

@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Award, Users, HeartHandshake, ShieldAlert } from "lucide-react";
+import { Award, Users, Smile, ShieldAlert } from "lucide-react";
 
 interface StatItem {
   id: number;
@@ -29,10 +29,10 @@ const STATS: StatItem[] = [
   },
   {
     id: 3,
-    icon: HeartHandshake,
+    icon: Smile,
     value: 99,
     suffix: "%",
-    label: "Patient Satisfaction",
+    label: "Smile Satisfaction",
   },
   {
     id: 4,
@@ -90,7 +90,6 @@ export default function TrustBar() {
               <div className="flex flex-col">
                 <div className="font-heading font-extrabold text-2xl md:text-3xl text-dark-text tracking-tight flex items-baseline">
                   {stat.id === 4 ? (
-                    // For "24x7" we render specifically
                     <span>
                       24<span className="text-secondary text-lg font-semibold mx-0.5">×</span>7
                     </span>
