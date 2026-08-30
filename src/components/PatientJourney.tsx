@@ -32,14 +32,14 @@ const STEPS: Step[] = [
   {
     id: 4,
     icon: ShieldPlus,
-    title: "Personalized Treatment",
-    desc: "Get a treatment plan based on your individual requirements.",
+    title: "Treatment Plan",
+    desc: "Get a personalized treatment plan based on your requirements.",
   },
   {
     id: 5,
     icon: Sparkles,
-    title: "Comfortable Treatment",
-    desc: "Receive professional dental care in a modern and comfortable environment.",
+    title: "Dental Treatment",
+    desc: "Receive professional dental care in a comfortable environment.",
   },
   {
     id: 6,

@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Activity,
   Search,
-  MessageSquare,
-  TrendingUp,
   Layers,
+  TrendingUp,
   Smile,
+  Award,
+  Sparkles,
+  Shield,
   X,
   Calendar,
   CheckCircle,
@@ -29,56 +31,74 @@ const SERVICES: Service[] = [
   {
     id: 1,
     icon: Activity,
-    title: "Root Canal",
-    shortDesc: "A root canal is a dental procedure that saves a tooth by removing infected or damaged nerve tissue and bacteria from inside the tooth.",
-    longDesc: "A root canal is a dental procedure that saves a tooth by removing infected or damaged nerve tissue and bacteria from inside the tooth. The inner root canals are thoroughly cleaned, disinfected, and sealed to prevent any future bacterial infection, preserving your natural tooth structure.",
-    indications: ["Severe persistent toothache", "Sensitivity to hot & cold", "Swelling or tenderness in gums", "Tooth discoloration"],
-    preparation: "Eat a light meal before your appointment as local anesthesia will be administered. Take any prescribed medications.",
+    title: "Root Canal Treatment",
+    shortDesc: "Professional treatment to save infected or damaged teeth and restore oral health.",
+    longDesc: "A root canal treatment removes infected or damaged pulp from inside a tooth, cleans and sanitizes the inner root canals, and seals them. This stops the spread of infection, relieves pain, and saves your natural tooth structure.",
+    indications: ["Severe or persistent toothache", "Sensitivity to hot or cold temperatures", "Swelling or tenderness in surrounding gums", "Tooth discoloration"],
+    preparation: "Eat a light meal prior to your appointment. Keep a list of any current medications and review them with the dentist.",
   },
   {
     id: 2,
     icon: Search,
     title: "Cavity Inspection",
-    shortDesc: "A thorough examination to identify cavities and other oral health problems at an early stage.",
-    longDesc: "A thorough examination to identify cavities and other oral health problems at an early stage. Our dental team performs tactile exams, low-exposure digital scanning, and visual assessments to locate decay early and prevent complex treatments.",
-    indications: ["Tooth sensitivity to sweet, hot, or cold", "Visible holes or pits in teeth", "Pain when biting or chewing", "Routine preventive dental checkup"],
-    preparation: "Brush and floss your teeth before your visit. Bring a list of any current medications.",
+    shortDesc: "Thorough examination to identify cavities and other dental problems at an early stage.",
+    longDesc: "A comprehensive inspection utilizing manual probes and digital X-rays to locate dental decay, enamel erosion, and structural cracks early on, preventing more complex dental conditions.",
+    indications: ["Tooth sensitivity to sweet or temperature changes", "Visible pits or holes in teeth", "Mild tooth discomfort while biting", "Routine checkups"],
+    preparation: "Brush and floss your teeth before your visit. Arrive early to complete registration details.",
   },
   {
     id: 3,
-    icon: MessageSquare,
-    title: "Live Advisor",
-    shortDesc: "Connect with dental professionals for guidance and answers to dental questions.",
-    longDesc: "Connect with dental professionals for guidance and answers to dental questions. Receive professional dental guidance, symptom evaluations, and information regarding preparation for upcoming procedures from our team.",
-    indications: ["General dental questions", "Oral health symptom queries", "Treatment options clarification", "Emergency dental guidance"],
-    preparation: "Have your questions or previous dental history details prepared for an informative guidance session.",
+    icon: Layers,
+    title: "Dental Implants",
+    shortDesc: "Reliable and natural-looking solutions for replacing missing teeth.",
+    longDesc: "Dental implants are titanium posts surgically placed into the jawbone, acting as artificial tooth roots. Once integrated, they support custom crowns, providing structural stability and a natural appearance.",
+    indications: ["Single or multiple missing teeth", "Uncomfortable or loose dentures", "Desire to preserve jawbone structure and facial shape"],
+    preparation: "Requires a prior 3D CBCT digital scan to assess bone density. Discuss any health conditions affecting bone healing.",
   },
   {
     id: 4,
     icon: TrendingUp,
     title: "Orthodontics",
-    shortDesc: "Orthodontic treatment focuses on diagnosing and correcting improperly aligned teeth and bite problems.",
-    longDesc: "Orthodontic treatment focuses on diagnosing and correcting improperly aligned teeth and bite problems. We use modern, custom-designed appliances to gently guide your teeth into their optimal alignment, supporting teeth function and facial symmetry.",
-    indications: ["Crooked or crowded teeth", "Gaps between teeth", "Overbites, underbites, or crossbites", "Bite alignment difficulties"],
-    preparation: "A comprehensive assessment including X-rays and digital impressions will be performed during your initial visit.",
+    shortDesc: "Treatment to improve tooth alignment and correct bite-related problems.",
+    longDesc: "Orthodontic therapies diagnose and correct crowded, misaligned, or crooked teeth and bite problems. Custom appliances are used to gently align your teeth over time, improving function and appearance.",
+    indications: ["Crooked or crowded teeth", "Gaps between teeth", "Bite issues like overbites, underbites, or crossbites"],
+    preparation: "Comprehensive diagnostic X-rays and mouth impressions will be taken during your consult.",
   },
   {
     id: 5,
-    icon: Layers,
+    icon: Smile,
     title: "Teeth Alignment",
-    shortDesc: "Dental alignment treatments help improve the position of teeth and create a healthier, more balanced smile.",
-    longDesc: "Dental alignment treatments help improve the position of teeth and create a healthier, more balanced smile. Our treatments utilize advanced custom clear aligners and modern techniques to straighten your teeth comfortably and discreetly.",
-    indications: ["Rotated or shifted teeth", "Gaps between front teeth", "Mild teeth crowding", "Desire for a straighter, balanced smile"],
-    preparation: "Avoid eating heavy sticky foods right before dental scanning or impression-taking.",
+    shortDesc: "Modern solutions to help achieve properly aligned teeth and a healthier smile.",
+    longDesc: "Modern clear aligners offer a comfortable, removable, and transparent way to straighten teeth. These custom aligners gradually shift your teeth into the correct position without traditional brackets.",
+    indications: ["Mild teeth crowding or spacing gaps", "Desire for transparent alignment options", "Correcting minor shifts in teeth position"],
+    preparation: "Maintain excellent oral hygiene. Cleanings are recommended prior to aligner mapping.",
   },
   {
     id: 6,
-    icon: Smile,
+    icon: Award,
     title: "Cosmetic Dentistry",
-    shortDesc: "Cosmetic dentistry focuses on improving the appearance and aesthetics of your smile, including treatments such as teeth whitening and dental bonding.",
-    longDesc: "Cosmetic dentistry focuses on improving the appearance and aesthetics of your smile, including treatments such as teeth whitening and dental bonding. We design personalized cosmetic plans to restore tooth shapes, colors, and balance for a natural-looking smile.",
-    indications: ["Tooth discoloration or staining", "Chipped, worn, or fractured teeth", "Slight gaps or uneven tooth heights", "Uneven smile line shapes"],
-    preparation: "Brush your teeth thoroughly. Avoid eating heavy coloring foods (like coffee or berries) before your checkup.",
+    shortDesc: "Dental treatments focused on improving the appearance and aesthetics of your smile.",
+    longDesc: "Cosmetic dentistry enhances your smile using composite bonding, porcelain veneers, and gum reshaping. We analyze facial symmetry to design a balanced, natural-looking aesthetic.",
+    indications: ["Chipped, worn, or slightly fractured teeth", "Minor gaps in front teeth", "Irregular tooth shapes or surface textures"],
+    preparation: "A smile design consultation is held to align on expectations and explore treatment options.",
+  },
+  {
+    id: 7,
+    icon: Sparkles,
+    title: "Teeth Whitening",
+    shortDesc: "Professional whitening treatment for a brighter and more confident smile.",
+    longDesc: "Professional whitening utilizes safe bleaching agents activated by clinical lights to remove deep-set stains on tooth enamel. It brightens your smile by multiple shades in one visit.",
+    indications: ["Tooth yellowing or discoloration", "Dietary stains from coffee, tea, or red wine", "Aesthetic enhancement for upcoming events"],
+    preparation: "It is recommended to have professional scaling done first for uniform whitening results.",
+  },
+  {
+    id: 8,
+    icon: Shield,
+    title: "General Dentistry",
+    shortDesc: "Routine dental examinations, preventive care, and treatment for common oral health problems.",
+    longDesc: "General dentistry covers regular examinations, cleanings, preventive sealant applications, and tooth fillings. Regular general care is the best way to prevent cavities and maintain healthy gums.",
+    indications: ["Routine dental examinations (every 6 months)", "Minor sensitivity or mouth discomfort", "Plaque and tartar removal"],
+    preparation: "Brush your teeth before your visit. Bring details of any medical history or allergies.",
   },
 ];
 
@@ -107,7 +127,7 @@ export default function Services() {
         {/* Header */}
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-bold text-primary uppercase tracking-widest mb-3">
-            What We Provide
+            Comprehensive Dental Care for Your Smile
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
             Our Services
@@ -127,7 +147,7 @@ export default function Services() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: Math.min(idx * 0.05, 0.4), ease: "easeOut" }}
                 whileHover={{ y: -6 }}
-                className="group p-8 rounded-3xl bg-[#F8FAFC] border border-borders/50 hover:border-primary/20 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col justify-between items-start text-left cursor-pointer"
+                className="group p-8 rounded-3xl bg-[#F8FAFC] border border-borders/50 hover:border-primary/20 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col justify-between items-start text-left cursor-pointer min-h-[250px]"
                 onClick={() => setSelectedService(service)}
               >
                 <div>
@@ -187,7 +207,7 @@ export default function Services() {
                     </div>
                     <div>
                       <span className="text-[10px] font-bold tracking-widest uppercase text-white/70">
-                        Dental Service
+                        Dental Treatment
                       </span>
                       <h4 className="font-heading font-extrabold text-2xl text-white tracking-tight mt-0.5">
                         {selectedService.title}

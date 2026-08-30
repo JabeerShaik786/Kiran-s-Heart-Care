@@ -36,15 +36,12 @@ function ContactCard({ icon: Icon, title, details }: ContactCardProps) {
           {title}
         </span>
         {title === "Email" ? (
-          <a
-            href={`mailto:${details}`}
-            className="text-sm font-semibold text-dark-text mt-1 hover:text-primary transition-colors"
-          >
+          <span className="text-sm font-semibold text-dark-text mt-1">
             {details}
-          </a>
+          </span>
         ) : title === "Reception & Booking" ? (
           <a
-            href={`tel:${details}`}
+            href={`tel:09885349798`}
             className="text-sm font-semibold text-dark-text mt-1 hover:text-primary transition-colors"
           >
             {details}
@@ -91,7 +88,7 @@ export default function ContactSection() {
             Appointment Booking
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight">
-            Book Your Appointment
+            Book Your Dental Appointment
           </h2>
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>
@@ -111,7 +108,7 @@ export default function ContactSection() {
             <div className="relative rounded-[24px] overflow-hidden border border-white/60 shadow-[0_30px_80px_rgba(15,23,42,0.12)] group-hover:shadow-[0_40px_90px_rgba(15,23,42,0.18)] transition-all duration-300 aspect-[4/5] w-full max-w-[420px]">
               <Image
                 src="/dentist_portrait.jpg"
-                alt="V.R. Dental Care Dentist Portrait"
+                alt="V.R. Dental Care & Dental Implant Centre Portrait"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -123,7 +120,7 @@ export default function ContactSection() {
                   <Smile className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex flex-col text-left">
-                  <span className="text-base font-extrabold text-slate-800 leading-tight">V.R. Dental Care</span>
+                  <span className="text-sm font-extrabold text-slate-800 leading-tight">V.R. Dental Care & Dental Implant Centre</span>
                   <span className="text-xs text-slate-600 font-semibold mt-0.5">Transforming Smiles, Transforming Lives</span>
                   <span className="text-[11px] text-primary font-bold mt-1.5 tracking-wider uppercase">Professional Care</span>
                 </div>
@@ -145,7 +142,7 @@ export default function ContactSection() {
                     transition={{ duration: 0.3 }}
                   >
                     <h3 className="font-heading font-extrabold text-3xl text-dark-text tracking-tight mb-2 text-left">
-                      Book Your Appointment
+                      Book Your Dental Appointment
                     </h3>
                     <p className="text-sm text-gray-text font-normal leading-relaxed text-left mb-8">
                       Take the first step towards a healthier and more confident smile.
@@ -265,12 +262,14 @@ export default function ContactSection() {
                           {...register("service", { required: "Please select a dental service" })}
                         >
                           <option value="" disabled>Select dental service</option>
-                          <option value="Root Canal">Root Canal</option>
+                          <option value="General Dentistry">General Dentistry</option>
+                          <option value="Root Canal Treatment">Root Canal Treatment</option>
                           <option value="Cavity Inspection">Cavity Inspection</option>
+                          <option value="Dental Implants">Dental Implants</option>
                           <option value="Orthodontics">Orthodontics</option>
                           <option value="Teeth Alignment">Teeth Alignment</option>
                           <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-                          <option value="General Dental Consultation">General Dental Consultation</option>
+                          <option value="Teeth Whitening">Teeth Whitening</option>
                           <option value="Other">Other</option>
                         </select>
                         {errors.service && (
@@ -292,12 +291,12 @@ export default function ContactSection() {
                         />
                       </div>
 
-                      {/* Submit Button */}
-                      <div className="sm:col-span-2 pt-2">
+                      {/* Submit Button & Direct Call stack */}
+                      <div className="sm:col-span-2 pt-2 flex flex-col gap-4">
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full h-14 bg-gradient-to-r from-primary to-secondary hover:from-[#096d68] hover:to-[#0c8ab2] text-white font-bold text-base rounded-2xl shadow-lg shadow-primary/15 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 flex items-center justify-center gap-2.5 disabled:opacity-75 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+                          className="w-full h-14 bg-primary hover:bg-[#066bbd] text-white font-bold text-base rounded-2xl shadow-lg shadow-primary/15 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 flex items-center justify-center gap-2.5 disabled:opacity-75 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
                         >
                           {isSubmitting ? (
                             <span className="w-5 h-5 rounded-full border-2 border-white border-t-transparent animate-spin" />
@@ -308,6 +307,13 @@ export default function ContactSection() {
                             </>
                           )}
                         </button>
+                        
+                        <div className="flex items-center justify-center gap-2 text-sm text-gray-text font-medium">
+                          <span>Or call directly:</span>
+                          <a href="tel:09885349798" className="text-primary font-bold hover:underline">
+                            Call 098853 49798
+                          </a>
+                        </div>
                       </div>
                     </form>
                   </motion.div>
@@ -328,7 +334,7 @@ export default function ContactSection() {
                     </h3>
                     
                     <p className="text-base text-gray-text max-w-md leading-relaxed font-normal mb-8">
-                      Thank you for choosing V.R. Dental Care. Our clinical team has received your request and will call you back at your provided phone number to confirm your slot.
+                      Thank you for choosing V.R. Dental Care & Dental Implant Centre. Our clinical team has received your request and will call you back at your provided phone number to confirm your slot.
                     </p>
                     
                     <div className="p-4 rounded-2xl bg-slate-50 border border-borders/60 flex items-center gap-3 text-left w-full max-w-sm mb-8">
@@ -367,8 +373,8 @@ export default function ContactSection() {
             className="lg:col-span-8 w-full rounded-[24px] overflow-hidden shadow-[0_15px_50px_rgba(15,23,42,0.05)] border border-borders relative h-[450px]"
           >
             <iframe
-              title="V.R. Dental Care Clinic Map Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.562013898165!2d77.21822357618956!3d28.613939075674287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sCentral%20Park!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              title="V.R. Dental Care & Dental Implant Centre Map Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.969176378418!2d82.21557007579178!3d16.728224521453205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a381fed6dbf3fbf%3A0xe54e60e86b404d03!2sGMC%20Balayogi%20Stadium!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               className="absolute inset-0 w-full h-full border-none"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -380,12 +386,12 @@ export default function ContactSection() {
             <ContactCard
               icon={MapPin}
               title="Clinic Address"
-              details="[Clinic Address]"
+              details="3rd Cross St, opposite GMC Balayogi Stadium, Zicria Nagar, Zicriya Nagar, Yanam, Andhra Pradesh 533464"
             />
             <ContactCard
               icon={Phone}
               title="Reception & Booking"
-              details="[Clinic Phone Number]"
+              details="098853 49798"
             />
             <ContactCard
               icon={Mail}

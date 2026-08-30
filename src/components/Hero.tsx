@@ -62,17 +62,17 @@ export default function Hero() {
             <div className="relative flex items-center justify-center text-primary">
               <Smile className="w-4 h-4 text-primary relative animate-pulse" />
             </div>
-            <span className="text-sm font-semibold text-primary tracking-wide">
-              Welcome to V.R. Dental Care
+            <span className="text-xs md:text-sm font-semibold text-primary tracking-wide">
+              V.R. Dental Care & Dental Implant Centre
             </span>
           </motion.div>
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-heading font-extrabold text-4xl md:text-5xl lg:text-[54px] tracking-tight text-dark-text leading-[1.08] mb-6"
+            className="font-heading font-extrabold text-4xl md:text-5xl lg:text-[60px] tracking-tight text-dark-text leading-[1.08] mb-6"
           >
-            Transforming Smiles,{" "}
+            Transforming Smiles,<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
               Transforming Lives
             </span>
@@ -81,9 +81,9 @@ export default function Hero() {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-text font-bold tracking-wide uppercase leading-relaxed max-w-xl mb-8"
+            className="text-base md:text-lg text-gray-text font-normal leading-relaxed max-w-xl mb-8"
           >
-            We Are Best Dental Services
+            Providing professional, personalized, and comfortable dental care with modern technology and a patient-first approach.
           </motion.p>
 
           {/* Action Buttons */}
@@ -100,11 +100,11 @@ export default function Hero() {
               <span>Book Appointment</span>
             </a>
             <a
-              href="#contact"
-              onClick={scrollToContact}
+              href="tel:09885349798"
               className="px-8 py-4 bg-white border border-borders text-primary text-base font-bold rounded-full shadow-sm hover:bg-primary/5 hover:border-primary/20 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer"
             >
-              <span>Contact Us</span>
+              <Phone className="w-5 h-5 text-primary" />
+              <span>Call Now</span>
             </a>
           </motion.div>
         </motion.div>
@@ -123,7 +123,7 @@ export default function Hero() {
           <div className="relative w-full h-full rounded-[32px] overflow-hidden border border-white/60 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
             <Image
               src="/healthy_smile.jpg"
-              alt="Healthy Dental Smile at [Dental Clinic Name]"
+              alt="Healthy Dental Smile at V.R. Dental Care & Dental Implant Centre"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"

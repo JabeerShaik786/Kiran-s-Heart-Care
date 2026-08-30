@@ -15,36 +15,40 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "V.R. Dental Care | Transforming Smiles, Transforming Lives",
-  description: "V.R. Dental Care provides professional and personalized dental services in a modern and comfortable environment.",
+  title: "V.R. Dental Care & Dental Implant Centre | Yanam",
+  description: "V.R. Dental Care & Dental Implant Centre in Yanam provides professional dental care, dental implants, root canal treatment, orthodontics, cosmetic dentistry, teeth whitening, and comprehensive oral healthcare.",
   keywords: [
     "V.R. Dental Care",
-    "Dentist",
-    "Dental Clinic",
-    "Root Canal",
+    "V.R. Dental Care & Dental Implant Centre",
+    "Yanam Dentist",
+    "Dentist in Yanam",
+    "Dental Clinic in Yanam",
+    "Dental Implants Yanam",
+    "Root Canal Treatment",
     "Cavity Inspection",
     "Orthodontics",
     "Teeth Alignment",
     "Cosmetic Dentistry",
-    "General Dental Consultation",
+    "General Dentistry",
+    "Teeth Whitening",
   ],
-  authors: [{ name: "V.R. Dental Care" }],
+  authors: [{ name: "V.R. Dental Care & Dental Implant Centre" }],
   openGraph: {
-    title: "V.R. Dental Care | Transforming Smiles, Transforming Lives",
-    description: "V.R. Dental Care provides professional and personalized dental services in a modern and comfortable environment.",
+    title: "V.R. Dental Care & Dental Implant Centre | Yanam",
+    description: "V.R. Dental Care & Dental Implant Centre in Yanam provides professional dental care, dental implants, root canal treatment, orthodontics, cosmetic dentistry, teeth whitening, and comprehensive oral healthcare.",
     type: "website",
     locale: "en_US",
-    siteName: "V.R. Dental Care",
+    siteName: "V.R. Dental Care & Dental Implant Centre",
   },
   twitter: {
     card: "summary_large_image",
-    title: "V.R. Dental Care",
-    description: "Transforming Smiles, Transforming Lives. Providing professional, personalized, and comfortable dental care.",
+    title: "V.R. Dental Care & Dental Implant Centre | Yanam",
+    description: "V.R. Dental Care & Dental Implant Centre in Yanam provides professional dental care, dental implants, root canal treatment, orthodontics, cosmetic dentistry, teeth whitening, and comprehensive oral healthcare.",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0D9488",
+  themeColor: "#087CE2",
   width: "device-width",
   initialScale: 1,
 };
@@ -59,7 +63,7 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${inter.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-[#0F172A] selection:bg-accent/30 font-sans">
+      <body className="min-h-full flex flex-col bg-white text-[#0F172A] selection:bg-primary/30 font-sans">
         {children}
       </body>
     </html>

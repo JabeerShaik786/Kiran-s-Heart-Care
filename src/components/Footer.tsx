@@ -31,16 +31,16 @@ export default function Footer() {
               <Smile className="w-5 h-5 text-accent" />
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-lg tracking-tight text-white leading-tight uppercase">
+              <span className="font-heading font-extrabold text-sm tracking-tight text-white leading-tight uppercase">
                 V.R. Dental Care
               </span>
-              <span className="font-sans font-medium text-[9px] tracking-[0.1em] text-accent uppercase leading-none mt-0.5">
-                Transforming Smiles
+              <span className="font-sans font-medium text-[8px] tracking-[0.05em] text-accent uppercase leading-none mt-0.5">
+                & Dental Implant Centre
               </span>
             </div>
           </a>
           <p className="text-white/60 text-sm leading-relaxed max-w-sm text-left">
-            V.R. Dental Care — Transforming Smiles, Transforming Lives. Providing professional, personalized, and comfortable dental care for healthier smiles.
+            Transforming Smiles, Transforming Lives. Professional and personalized dental care in a modern and comfortable environment.
           </p>
           <div className="flex items-center gap-3">
             <span className="text-[12px] bg-primary/20 text-accent px-3.5 py-1 rounded-full font-semibold border border-primary/10 flex items-center gap-1.5">
@@ -84,9 +84,9 @@ export default function Footer() {
           </h4>
           <ul className="flex flex-col gap-3.5 text-sm text-white/60">
             {[
-              { name: "Root Canal", href: "#services" },
+              { name: "Root Canal Treatment", href: "#services" },
               { name: "Cavity Inspection", href: "#services" },
-              { name: "Live Advisor", href: "#services" },
+              { name: "Dental Implants", href: "#services" },
               { name: "Orthodontics", href: "#services" },
               { name: "Teeth Alignment", href: "#services" },
               { name: "Cosmetic Dentistry", href: "#services" },
@@ -107,29 +107,27 @@ export default function Footer() {
         {/* Contact Column */}
         <div className="flex flex-col gap-5 text-left">
           <h4 className="font-heading font-bold text-base text-white tracking-wide uppercase">
-            Contact
+            Contact Us
           </h4>
           <div className="flex flex-col gap-4 text-sm text-white/60">
             <div className="flex gap-3">
               <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <span>[Clinic Address]</span>
+              <span>3rd Cross St, opposite GMC Balayogi Stadium, Zicria Nagar, Zicriya Nagar, Yanam, Andhra Pradesh 533464</span>
             </div>
             <div className="flex gap-3">
               <Phone className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <a href="tel:[Clinic Phone Number]" className="hover:text-white transition-colors">
-                [Clinic Phone Number]
+              <a href="tel:09885349798" className="hover:text-white transition-colors">
+                098853 49798
               </a>
             </div>
             <div className="flex gap-3">
               <Mail className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <a href="mailto:[Clinic Email]" className="hover:text-white transition-colors break-all">
-                [Clinic Email]
-              </a>
+              <span>[Clinic Email]</span>
             </div>
             <div className="flex gap-3">
               <MessageSquare className="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
               <a
-                href="https://wa.me/[Clinic Phone Number]"
+                href="https://wa.me/919885349798"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -144,7 +142,7 @@ export default function Footer() {
       <hr className="border-white/10 max-w-[1440px] mx-auto px-6 md:px-12" />
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-        <p>© {currentYear} V.R. Dental Care. All rights reserved.</p>
+        <p>© {currentYear} V.R. Dental Care & Dental Implant Centre. All rights reserved.</p>
         <div className="flex items-center gap-6">
           <a href="#" className="hover:text-white transition-colors duration-200">
             Privacy Policy

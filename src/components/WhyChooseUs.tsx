@@ -15,25 +15,25 @@ const CARDS: ChooseUsCard[] = [
     id: 1,
     icon: Award,
     title: "Experienced Staff",
-    description: "Our team of dental professionals brings years of experience and expertise to every patient interaction.",
+    description: "Our dental professionals bring experience and expertise to every patient interaction.",
   },
   {
     id: 2,
     icon: Sparkles,
     title: "Modern Equipment",
-    description: "We utilize modern dental technology to provide efficient, precise, and comfortable treatments.",
+    description: "We use modern dental technology to provide efficient, precise, and comfortable treatments.",
   },
   {
     id: 3,
     icon: Smile,
     title: "Comprehensive Care",
-    description: "From routine check-ups to advanced procedures, we offer a wide range of dental services to meet different oral health needs.",
+    description: "From routine checkups to advanced dental procedures, we provide a wide range of dental care.",
   },
   {
     id: 4,
     icon: Shield,
     title: "Comfortable Facility",
-    description: "Our modern and welcoming clinic is designed to make every dental visit as comfortable and pleasant as possible.",
+    description: "Our welcoming clinic environment is designed to make every dental visit comfortable and pleasant.",
   },
 ];
 
@@ -90,11 +90,10 @@ export default function WhyChooseUs() {
                 key={card.id}
                 variants={cardVariants}
                 whileHover={{ y: -8, scale: 1.01 }}
-                className="relative group rounded-3xl p-8 bg-white border border-borders/60 shadow-lg shadow-primary/[0.02] hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-start text-left overflow-hidden cursor-pointer animate-none"
+                className="relative group rounded-3xl p-8 bg-white border border-borders/60 shadow-lg shadow-primary/[0.02] hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-start text-left overflow-hidden cursor-pointer"
               >
                 {/* Glowing Corner Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/[0.02] to-secondary/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-accent/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Card Icon */}
                 <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 relative z-10 shadow-sm shadow-primary/5">

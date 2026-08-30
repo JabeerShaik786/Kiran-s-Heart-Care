@@ -44,15 +44,15 @@ const ARTICLES: BlogPost[] = [
   {
     id: 5,
     image: "/dental_checkup.jpg",
-    category: "Orthodontics",
-    title: "What Is Orthodontic Treatment?",
-    shortDesc: "An educational overview of dental alignment devices, clear aligners, and clinical timing for correcting bite problems.",
+    category: "Dental Implants",
+    title: "Understanding Dental Implants",
+    shortDesc: "Exploring titanium posts, surgical placement, and how they offer a permanent, natural-looking replacement for missing teeth.",
   },
   {
     id: 6,
     image: "/healthy_smile.jpg",
     category: "Cosmetic",
-    title: "Understanding Cosmetic Dentistry",
+    title: "What Is Cosmetic Dentistry?",
     shortDesc: "Exploring smile design elements, dental bonding, teeth whitening options, and custom treatments to enhance smile aesthetics.",
   },
 ];

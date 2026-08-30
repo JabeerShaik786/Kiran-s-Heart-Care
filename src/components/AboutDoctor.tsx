@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Smile, CheckCircle2 } from "lucide-react";
+import { Sparkles, Smile } from "lucide-react";
 import Image from "next/image";
 
 type TabType = "about" | "highlights" | "technology";
@@ -126,8 +126,8 @@ export default function AboutDoctor() {
             <span className="text-sm font-bold text-primary uppercase tracking-widest mb-3">
               About Us
             </span>
-            <h2 className="font-heading font-extrabold text-3xl md:text-[48px] text-dark-text tracking-tight leading-tight mb-6">
-              V.R. Dental Care
+            <h2 className="font-heading font-extrabold text-3xl md:text-[38px] text-dark-text tracking-tight leading-tight mb-6">
+              V.R. Dental Care & Dental Implant Centre
             </h2>
 
             {/* Navigation Tabs */}
@@ -167,10 +167,10 @@ export default function AboutDoctor() {
                     className="flex flex-col gap-6 text-gray-text text-base md:text-lg leading-relaxed font-normal"
                   >
                     <p>
-                      V.R. Dental Care is committed to providing exceptional dental services to our community. With our team of experienced professionals and state-of-the-art technology, we ensure that every patient receives personalized care and achieves their best smile.
+                      V.R. Dental Care is committed to providing exceptional dental services to our community. With our team of experienced professionals and modern dental technology, we strive to ensure that every patient receives personalized care and achieves a healthy, confident smile.
                     </p>
                     <p>
-                      Our mission is to create a comfortable and welcoming environment where patients of all ages can receive top-quality dental care. We focus on preventive dentistry and offer a wide range of services to meet all your oral health needs.
+                      Our mission is to create a comfortable and welcoming environment where patients of all ages can receive quality dental care. We focus on preventive dentistry and provide a wide range of dental treatments to meet different oral health needs.
                     </p>
                   </motion.div>
                 )}
@@ -185,9 +185,9 @@ export default function AboutDoctor() {
                     className="grid grid-cols-1 md:grid-cols-2 gap-4"
                   >
                     {[
-                      { title: "Experienced Professionals", desc: "A team of skilled dental practitioners bringing years of expertise to every interaction." },
+                      { title: "Experienced Staff", desc: "Our team of dental professionals brings experience and expertise to every patient interaction." },
                       { title: "Comfortable Environment", desc: "A welcoming, family-friendly atmosphere designed to reduce dental anxiety for all ages." },
-                      { title: "Personalized Care Plans", desc: "Treatments custom-tailored to your unique oral health profile and aesthetic goals." },
+                      { title: "Personalized Treatment", desc: "Care plans custom-tailored to your unique dental requirements and aesthetic goals." },
                       { title: "Preventive Care Focus", desc: "Active maintenance and early cavity inspection to preserve your natural smile." }
                     ].map((item, idx) => (
                       <div key={idx} className="p-4 rounded-xl border border-borders/60 hover:border-primary/20 hover:bg-slate-50/50 transition-all duration-200 flex gap-3.5">
@@ -212,12 +212,12 @@ export default function AboutDoctor() {
                   >
                     {[
                       {
-                        title: "Advanced Diagnostic Tools",
-                        desc: "High-precision digital mapping and cavity inspection systems for early decay location.",
+                        title: "Modern Equipment",
+                        desc: "We use modern dental technology to provide efficient, precise, and comfortable treatments.",
                       },
                       {
-                        title: "Comfort-Driven Equipment",
-                        desc: "Modern dental chairs and clinical instruments engineered for quick and comfortable procedures.",
+                        title: "Advanced Diagnostic Tools",
+                        desc: "High-precision digital mapping and cavity inspection systems for early decay location.",
                       },
                       {
                         title: "Hygienic Sterilization Standards",
