@@ -7,11 +7,13 @@ import Image from "next/image";
 export default function AppointmentCTA() {
   const handleScrollToBooking = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = document.querySelector("#contact");
+    const target = document.querySelector("#appointment");
     if (target) {
-      const offsetTop = target.getBoundingClientRect().top + window.scrollY - 100;
+      const headerEl = document.querySelector("header");
+      const navbarHeight = headerEl ? headerEl.getBoundingClientRect().height + 16 : 96;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 12;
       window.scrollTo({
-        top: offsetTop,
+        top: Math.max(0, targetPosition),
         behavior: "smooth",
       });
     }
@@ -45,7 +47,7 @@ export default function AppointmentCTA() {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
               <a
-                href="#contact"
+                href="#appointment"
                 onClick={handleScrollToBooking}
                 className="px-8 py-4 bg-white hover:bg-slate-100 text-primary text-base font-bold rounded-full shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer"
               >

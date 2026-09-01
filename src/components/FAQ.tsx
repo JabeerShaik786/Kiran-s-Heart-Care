@@ -99,8 +99,10 @@ export default function FAQ() {
               e.preventDefault();
               const target = document.querySelector("#contact");
               if (target) {
-                const offsetTop = target.getBoundingClientRect().top + window.scrollY - 100;
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                const headerEl = document.querySelector("header");
+                const navbarHeight = headerEl ? headerEl.getBoundingClientRect().height + 16 : 96;
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 12;
+                window.scrollTo({ top: Math.max(0, targetPosition), behavior: "smooth" });
               }
             }}
             className="px-6 py-3 border border-primary/20 hover:border-primary text-primary text-sm font-bold rounded-full transition-all duration-300 hover:bg-primary/5 cursor-pointer"

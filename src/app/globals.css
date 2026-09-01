@@ -71,9 +71,23 @@ h1, h2, h3, h4, h5, h6 {
   background: #94A3B8;
 }
 
-/* Smooth scroll */
+/* Smooth scroll & anchor scroll offset */
+:root {
+  --navbar-height: 96px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --navbar-height: 88px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+section, [id] {
+  scroll-margin-top: calc(var(--navbar-height) + 12px);
 }
 
 /* Form inputs focus styles */

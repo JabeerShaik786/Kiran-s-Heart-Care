@@ -5,13 +5,15 @@ import { Calendar, Phone, UserCheck, HeartHandshake, Sparkles } from "lucide-rea
 import Image from "next/image";
 
 export default function Hero() {
-  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToAppointment = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = document.querySelector("#contact");
+    const target = document.querySelector("#appointment");
     if (target) {
-      const offsetTop = target.getBoundingClientRect().top + window.scrollY - 100;
+      const headerEl = document.querySelector("header");
+      const navbarHeight = headerEl ? headerEl.getBoundingClientRect().height + 16 : 96;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 12;
       window.scrollTo({
-        top: offsetTop,
+        top: Math.max(0, targetPosition),
         behavior: "smooth",
       });
     }
@@ -124,8 +126,8 @@ export default function Hero() {
               className="flex flex-wrap items-center gap-3.5 w-full sm:w-auto mb-8"
             >
               <a
-                href="#contact"
-                onClick={scrollToContact}
+                href="#appointment"
+                onClick={scrollToAppointment}
                 className="px-6 py-3.5 bg-[#087CE2] text-white text-sm font-bold rounded-xl shadow-md shadow-[#087CE2]/15 hover:bg-[#066bbd] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Calendar className="w-4 h-4 text-white" />

@@ -107,13 +107,14 @@ export default function Services() {
 
   const handleBookService = () => {
     setSelectedService(null);
-    // Smooth scroll to contact
     setTimeout(() => {
-      const target = document.querySelector("#contact");
+      const target = document.querySelector("#appointment");
       if (target) {
-        const offsetTop = target.getBoundingClientRect().top + window.scrollY - 100;
+        const headerEl = document.querySelector("header");
+        const navbarHeight = headerEl ? headerEl.getBoundingClientRect().height + 16 : 96;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 12;
         window.scrollTo({
-          top: offsetTop,
+          top: Math.max(0, targetPosition),
           behavior: "smooth",
         });
       }

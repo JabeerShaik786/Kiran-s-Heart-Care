@@ -74,7 +74,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-28 bg-gradient-to-b from-[#F1F6FA] to-[#F8FAFC] relative overflow-hidden">
+    <section id="appointment" className="py-28 bg-gradient-to-b from-[#F1F6FA] to-[#F8FAFC] relative overflow-hidden">
       {/* Decorative backdrop shapes */}
       <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] bg-secondary/5 blur-[100px] rounded-full pointer-events-none" />
@@ -361,7 +361,7 @@ export default function ContactSection() {
       </div>
 
       {/* SECTION 2: Map + Contact Information Stack */}
-      <div className="max-w-[1320px] mx-auto px-6 md:px-8 border-t border-borders/60 pt-24">
+      <div id="contact" className="max-w-[1320px] mx-auto px-6 md:px-8 border-t border-borders/60 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Side (70% width -> lg:col-span-8) */}

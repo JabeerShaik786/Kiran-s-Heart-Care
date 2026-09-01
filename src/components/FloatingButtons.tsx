@@ -6,11 +6,13 @@ import { Phone, Calendar } from "lucide-react";
 export default function FloatingButtons() {
   const handleScrollToBooking = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = document.querySelector("#contact");
+    const target = document.querySelector("#appointment");
     if (target) {
-      const offsetTop = target.getBoundingClientRect().top + window.scrollY - 100;
+      const headerEl = document.querySelector("header");
+      const navbarHeight = headerEl ? headerEl.getBoundingClientRect().height + 16 : 96;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 12;
       window.scrollTo({
-        top: offsetTop,
+        top: Math.max(0, targetPosition),
         behavior: "smooth",
       });
     }
@@ -51,7 +53,7 @@ export default function FloatingButtons() {
           <span>Call Now</span>
         </a>
         <a
-          href="#contact"
+          href="#appointment"
           onClick={handleScrollToBooking}
           className="flex-1 flex items-center justify-center gap-2 py-3 bg-primary text-white font-bold text-xs rounded-2xl shadow-lg shadow-primary/20 hover:bg-secondary active:scale-[0.98] transition-all duration-200"
         >

@@ -7,11 +7,17 @@ export default function Footer() {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    if (href === "#home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
     const target = document.querySelector(href);
     if (target) {
-      const offsetTop = target.getBoundingClientRect().top + window.scrollY - 100;
+      const headerEl = document.querySelector("header");
+      const navbarHeight = headerEl ? headerEl.getBoundingClientRect().height + 16 : 96;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 12;
       window.scrollTo({
-        top: offsetTop,
+        top: Math.max(0, targetPosition),
         behavior: "smooth",
       });
     }
@@ -62,7 +68,7 @@ export default function Footer() {
               { name: "About", href: "#about" },
               { name: "Blog", href: "#blog" },
               { name: "Contact", href: "#contact" },
-              { name: "Book Appointment", href: "#contact" },
+              { name: "Book Appointment", href: "#appointment" },
             ].map((link) => (
               <li key={link.name}>
                 <a
