@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Smile, Calendar, Phone } from "lucide-react";
+import { Calendar, Phone, UserCheck, HeartHandshake, Sparkles } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -23,114 +23,228 @@ export default function Hero() {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.2,
+        delayChildren: 0.1,
       },
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+  const fadeUpVariant = {
+    hidden: { y: 25, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
+      transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const },
+    },
+  };
+
+  const doctorVariant = {
+    hidden: { y: 35, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as const },
+    },
+  };
+
+  const rightStackVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const rightItemVariant = {
+    hidden: { x: 20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
     },
   };
 
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] lg:min-h-screen w-full flex items-center pt-28 pb-28 overflow-hidden bg-gradient-to-b from-[#F0F6FA] via-[#F8FAFC] to-[#F8FAFC]"
+      className="relative min-h-[92vh] lg:min-h-screen w-full flex items-center pt-28 pb-16 lg:pb-0 overflow-hidden bg-[#FAFAFA]"
     >
-      {/* Background Decorative Blobs */}
-      <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-accent/20 blur-[120px] -z-10 animate-pulse pointer-events-none" />
-      <div className="absolute bottom-[10%] left-[-5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full bg-primary/5 blur-[100px] -z-10 pointer-events-none" />
+      {/* Extremely Subtle Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_75%_75%_at_50%_40%,#000_50%,transparent_100%)] opacity-35 pointer-events-none" />
 
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column - Content */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="lg:col-span-7 flex flex-col items-start text-left"
-        >
-          {/* Badge */}
+      {/* Main Grid Container */}
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 w-full relative z-10">
+        
+        {/* Desktop Layout: 3 Columns | Mobile Layout: Vertical Order */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-end">
+          
+          {/* ========================================================= */}
+          {/* LEFT SIDE — MAIN CONTENT (35% Width -> lg:col-span-4)     */}
+          {/* ========================================================= */}
           <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-primary/10 shadow-sm shadow-primary/5 mb-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="lg:col-span-4 flex flex-col items-start text-left self-center py-6 order-1"
           >
-            <div className="relative flex items-center justify-center text-primary">
-              <Smile className="w-4 h-4 text-primary relative animate-pulse" />
+            {/* Small Clinic Heading */}
+            <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-5">
+              <span className="text-[11px] md:text-[12px] font-extrabold tracking-[0.2em] text-[#087CE2] uppercase leading-tight">
+                V.R. DENTAL CARE
+              </span>
+              <span className="text-[10px] md:text-[11px] font-semibold tracking-[0.15em] text-[#64748B] uppercase leading-none">
+                & DENTAL IMPLANT CENTRE
+              </span>
+            </motion.div>
+
+            {/* Main Headline */}
+            <motion.h1
+              variants={fadeUpVariant}
+              className="font-serif text-4xl sm:text-5xl lg:text-[52px] xl:text-[58px] leading-[1.08] text-[#0F172A] tracking-tight font-bold mb-6"
+            >
+              Transforming Smiles,<br />
+              <span className="text-[#087CE2] font-serif italic block mt-1">
+                Transforming Lives
+              </span>
+            </motion.h1>
+
+            {/* Supporting Text */}
+            <motion.p
+              variants={fadeUpVariant}
+              className="text-xs sm:text-sm text-[#475569] leading-relaxed max-w-md font-normal mb-8"
+            >
+              Providing professional, personalized, and comfortable dental care with modern technology and a patient-first approach.
+            </motion.p>
+
+            {/* Action Buttons (Appointment & Call) */}
+            <motion.div
+              variants={fadeUpVariant}
+              className="flex flex-wrap items-center gap-3.5 w-full sm:w-auto mb-8"
+            >
+              <a
+                href="#contact"
+                onClick={scrollToContact}
+                className="px-6 py-3.5 bg-[#087CE2] text-white text-sm font-bold rounded-xl shadow-md shadow-[#087CE2]/15 hover:bg-[#066bbd] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Calendar className="w-4 h-4 text-white" />
+                <span>Book Appointment</span>
+              </a>
+
+              <a
+                href="tel:09885349798"
+                className="px-5 py-3.5 bg-white border border-slate-200 text-[#0F172A] hover:text-[#087CE2] hover:border-[#087CE2]/40 text-sm font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-xs"
+              >
+                <Phone className="w-4 h-4 text-[#087CE2]" />
+                <span>Call 098853 49798</span>
+              </a>
+            </motion.div>
+
+            {/* Optional Subtle Clinic Quote */}
+            <motion.div
+              variants={fadeUpVariant}
+              className="pt-4 border-t border-slate-200/80 w-full max-w-md"
+            >
+              <p className="text-xs italic text-slate-400 font-medium tracking-wide">
+                "Every smile deserves thoughtful care."
+              </p>
+            </motion.div>
+          </motion.div>
+
+          {/* ========================================================= */}
+          {/* CENTER — DOCTOR IMAGE (40% Width -> lg:col-span-5)        */}
+          {/* ========================================================= */}
+          <motion.div
+            variants={doctorVariant}
+            initial="hidden"
+            animate="visible"
+            className="lg:col-span-5 relative w-full flex flex-col items-center justify-end self-end mt-4 lg:mt-0 order-2 lg:order-none"
+          >
+            {/* Subtle Soft Blue Glow behind Doctor */}
+            <div className="absolute bottom-10 w-[70%] h-[60%] bg-[#087CE2]/12 rounded-full blur-[90px] pointer-events-none" />
+
+            {/* Doctor Image Container (Bottom Aligned, Transparent, Head-to-Torso visible) */}
+            <div className="relative w-full h-[460px] sm:h-[540px] lg:h-[600px] xl:h-[640px] flex items-end justify-center z-10 overflow-visible">
+              <Image
+                src="/vr_doctor.png"
+                alt="Dr. V.R. Dental Care & Dental Implant Centre"
+                width={560}
+                height={700}
+                className="object-contain object-bottom max-h-full drop-shadow-xl"
+                priority
+              />
             </div>
-            <span className="text-xs md:text-sm font-semibold text-primary tracking-wide">
-              V.R. Dental Care & Dental Implant Centre
-            </span>
           </motion.div>
 
-          {/* Heading */}
-          <motion.h1
-            variants={itemVariants}
-            className="font-heading font-extrabold text-4xl md:text-5xl lg:text-[60px] tracking-tight text-dark-text leading-[1.08] mb-6"
-          >
-            Transforming Smiles,<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Transforming Lives
-            </span>
-          </motion.h1>
-
-          {/* Description */}
-          <motion.p
-            variants={itemVariants}
-            className="text-base md:text-lg text-gray-text font-normal leading-relaxed max-w-xl mb-8"
-          >
-            Providing professional, personalized, and comfortable dental care with modern technology and a patient-first approach.
-          </motion.p>
-
-          {/* Action Buttons */}
+          {/* ========================================================= */}
+          {/* RIGHT SIDE — INFORMATION BLOCKS (25% Width -> lg:col-span-3) */}
+          {/* ========================================================= */}
           <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-0"
+            variants={rightStackVariant}
+            initial="hidden"
+            animate="visible"
+            className="lg:col-span-3 flex flex-col gap-4 self-center py-6 order-3 lg:order-none"
           >
-            <a
-              href="#contact"
-              onClick={scrollToContact}
-              className="px-8 py-4 bg-primary text-white text-base font-bold rounded-full overflow-hidden shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 group hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer"
+            {/* Information Block 1 */}
+            <motion.div
+              variants={rightItemVariant}
+              whileHover={{ x: 4, transition: { duration: 0.2 } }}
+              className="p-5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
             >
-              <Calendar className="w-5 h-5 text-white" />
-              <span>Book Appointment</span>
-            </a>
-            <a
-              href="tel:09885349798"
-              className="px-8 py-4 bg-white border border-borders text-primary text-base font-bold rounded-full shadow-sm hover:bg-primary/5 hover:border-primary/20 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer"
+              <div className="w-10 h-10 rounded-xl bg-[#087CE2]/10 text-[#087CE2] flex items-center justify-center shrink-0 mt-0.5">
+                <UserCheck className="w-5 h-5 text-[#087CE2]" />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
+                  Personalized
+                </span>
+                <span className="text-sm font-bold text-[#0F172A] mt-0.5 leading-snug">
+                  Dental Care
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Information Block 2 */}
+            <motion.div
+              variants={rightItemVariant}
+              whileHover={{ x: 4, transition: { duration: 0.2 } }}
+              className="p-5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
             >
-              <Phone className="w-5 h-5 text-primary" />
-              <span>Call Now</span>
-            </a>
+              <div className="w-10 h-10 rounded-xl bg-[#087CE2]/10 text-[#087CE2] flex items-center justify-center shrink-0 mt-0.5">
+                <HeartHandshake className="w-5 h-5 text-[#087CE2]" />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
+                  Comfortable
+                </span>
+                <span className="text-sm font-bold text-[#0F172A] mt-0.5 leading-snug">
+                  Patient Experience
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Information Block 3 */}
+            <motion.div
+              variants={rightItemVariant}
+              whileHover={{ x: 4, transition: { duration: 0.2 } }}
+              className="p-5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
+            >
+              <div className="w-10 h-10 rounded-xl bg-[#087CE2]/10 text-[#087CE2] flex items-center justify-center shrink-0 mt-0.5">
+                <Sparkles className="w-5 h-5 text-[#087CE2]" />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
+                  Advanced
+                </span>
+                <span className="text-sm font-bold text-[#0F172A] mt-0.5 leading-snug">
+                  Dental Technology
+                </span>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
 
-        {/* Right Column - Premium Dental Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:col-span-5 relative w-full aspect-square max-w-[500px] lg:max-w-none mx-auto flex items-center justify-center"
-        >
-          {/* Glowing Ambient Backdrop */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-accent/15 to-transparent rounded-full blur-2xl animate-pulse" />
-
-          {/* Healthy Smile Image */}
-          <div className="relative w-full h-full rounded-[32px] overflow-hidden border border-white/60 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
-            <Image
-              src="/healthy_smile.jpg"
-              alt="Healthy Dental Smile at V.R. Dental Care & Dental Implant Centre"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              priority
-            />
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
