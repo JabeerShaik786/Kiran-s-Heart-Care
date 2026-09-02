@@ -71,25 +71,25 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[92vh] lg:min-h-screen w-full flex items-center pt-28 pb-16 lg:pb-0 overflow-hidden bg-[#FAFAFA]"
+      className="relative min-h-[92vh] lg:min-h-screen w-full flex items-center pt-28 pb-16 lg:pb-0 overflow-hidden bg-white"
     >
       {/* Extremely Subtle Editorial Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_40%,#000_60%,transparent_100%)] opacity-35 pointer-events-none" />
 
-      {/* Main Grid Container */}
+      {/* Main Container */}
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 w-full relative z-10">
         
-        {/* Desktop Layout: 3 Columns (1fr | 1.15fr | 0.75fr) | Mobile Layout: Vertical Flow */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr_0.75fr] gap-8 lg:gap-6 items-end">
+        {/* 3-Column Desktop Grid: LEFT (4 cols) | CENTER DOCTOR (5 cols) | RIGHT BENEFITS (3 cols) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-end">
           
           {/* ========================================================= */}
-          {/* LEFT SIDE — MAIN CONTENT (~32% Width)                      */}
+          {/* COLUMN 1: LEFT SIDE — MAIN CONTENT (lg:col-span-4 ~33%)    */}
           {/* ========================================================= */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-start text-left self-center py-6 order-1"
+            className="lg:col-span-4 flex flex-col items-start text-left self-center py-6"
           >
             {/* Small Clinic Heading */}
             <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-5">
@@ -104,7 +104,7 @@ export default function Hero() {
             {/* Main Headline */}
             <motion.h1
               variants={fadeUpVariant}
-              className="font-serif text-4xl sm:text-5xl lg:text-[50px] xl:text-[56px] leading-[1.08] text-[#111111] tracking-tight font-bold mb-6"
+              className="font-serif text-4xl sm:text-5xl lg:text-[48px] xl:text-[54px] leading-[1.08] text-[#111111] tracking-tight font-bold mb-6"
             >
               Transforming Smiles,<br />
               <span className="text-[#087CE2] font-serif italic block mt-1">
@@ -155,13 +155,13 @@ export default function Hero() {
           </motion.div>
 
           {/* ========================================================= */}
-          {/* CENTER — DOCTOR IMAGE (~38-40% Width - CENTRAL FOCAL POINT) */}
+          {/* COLUMN 2: CENTER — DOCTOR IMAGE (lg:col-span-5 ~42%)      */}
           {/* ========================================================= */}
           <motion.div
             variants={doctorVariant}
             initial="hidden"
             animate="visible"
-            className="relative w-full flex flex-col items-center justify-end self-end mt-4 lg:mt-0 order-2 lg:order-none"
+            className="lg:col-span-5 relative w-full flex flex-col items-center justify-end self-end mt-4 lg:mt-0"
           >
             {/* Subtle Soft Blue Glow behind Doctor */}
             <div className="absolute bottom-8 w-[75%] h-[65%] bg-[#087CE2]/12 rounded-full blur-[95px] pointer-events-none" />
@@ -169,24 +169,25 @@ export default function Hero() {
             {/* Doctor Image Container (Bottom Aligned, Transparent PNG, Head-to-Torso visible) */}
             <div className="relative w-full h-[480px] sm:h-[550px] lg:h-[620px] xl:h-[660px] flex items-end justify-center z-10 overflow-visible">
               <Image
-                src="/vr_doctor.png"
+                src="/doctor.png"
                 alt="Dr. V.R. Dental Care & Dental Implant Centre"
                 width={560}
                 height={700}
                 className="object-contain object-bottom max-h-full drop-shadow-xl"
                 priority
+                unoptimized
               />
             </div>
           </motion.div>
 
           {/* ========================================================= */}
-          {/* RIGHT SIDE — INFORMATION BLOCKS (~22-25% Width)          */}
+          {/* COLUMN 3: RIGHT SIDE — BENEFITS STACK (lg:col-span-3 ~25%)*/}
           {/* ========================================================= */}
           <motion.div
             variants={rightStackVariant}
             initial="hidden"
             animate="visible"
-            className="flex flex-col gap-4 self-center py-6 order-3 lg:order-none"
+            className="lg:col-span-3 flex flex-col gap-4 self-center py-6"
           >
             {/* Information Block 1 */}
             <motion.div
