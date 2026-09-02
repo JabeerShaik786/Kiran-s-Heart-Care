@@ -73,23 +73,23 @@ export default function Hero() {
       id="home"
       className="relative min-h-[92vh] lg:min-h-screen w-full flex items-center pt-28 pb-16 lg:pb-0 overflow-hidden bg-[#FAFAFA]"
     >
-      {/* Extremely Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_75%_75%_at_50%_40%,#000_50%,transparent_100%)] opacity-35 pointer-events-none" />
+      {/* Extremely Subtle Editorial Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_40%,#000_60%,transparent_100%)] opacity-35 pointer-events-none" />
 
       {/* Main Grid Container */}
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 w-full relative z-10">
         
-        {/* Desktop Layout: 3 Columns | Mobile Layout: Vertical Order */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-end">
+        {/* Desktop Layout: 3 Columns (1fr | 1.15fr | 0.75fr) | Mobile Layout: Vertical Flow */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr_0.75fr] gap-8 lg:gap-6 items-end">
           
           {/* ========================================================= */}
-          {/* LEFT SIDE — MAIN CONTENT (35% Width -> lg:col-span-4)     */}
+          {/* LEFT SIDE — MAIN CONTENT (~32% Width)                      */}
           {/* ========================================================= */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-4 flex flex-col items-start text-left self-center py-6 order-1"
+            className="flex flex-col items-start text-left self-center py-6 order-1"
           >
             {/* Small Clinic Heading */}
             <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-5">
@@ -104,7 +104,7 @@ export default function Hero() {
             {/* Main Headline */}
             <motion.h1
               variants={fadeUpVariant}
-              className="font-serif text-4xl sm:text-5xl lg:text-[52px] xl:text-[58px] leading-[1.08] text-[#0F172A] tracking-tight font-bold mb-6"
+              className="font-serif text-4xl sm:text-5xl lg:text-[50px] xl:text-[56px] leading-[1.08] text-[#111111] tracking-tight font-bold mb-6"
             >
               Transforming Smiles,<br />
               <span className="text-[#087CE2] font-serif italic block mt-1">
@@ -155,19 +155,19 @@ export default function Hero() {
           </motion.div>
 
           {/* ========================================================= */}
-          {/* CENTER — DOCTOR IMAGE (40% Width -> lg:col-span-5)        */}
+          {/* CENTER — DOCTOR IMAGE (~38-40% Width - CENTRAL FOCAL POINT) */}
           {/* ========================================================= */}
           <motion.div
             variants={doctorVariant}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-5 relative w-full flex flex-col items-center justify-end self-end mt-4 lg:mt-0 order-2 lg:order-none"
+            className="relative w-full flex flex-col items-center justify-end self-end mt-4 lg:mt-0 order-2 lg:order-none"
           >
             {/* Subtle Soft Blue Glow behind Doctor */}
-            <div className="absolute bottom-10 w-[70%] h-[60%] bg-[#087CE2]/12 rounded-full blur-[90px] pointer-events-none" />
+            <div className="absolute bottom-8 w-[75%] h-[65%] bg-[#087CE2]/12 rounded-full blur-[95px] pointer-events-none" />
 
-            {/* Doctor Image Container (Bottom Aligned, Transparent, Head-to-Torso visible) */}
-            <div className="relative w-full h-[460px] sm:h-[540px] lg:h-[600px] xl:h-[640px] flex items-end justify-center z-10 overflow-visible">
+            {/* Doctor Image Container (Bottom Aligned, Transparent PNG, Head-to-Torso visible) */}
+            <div className="relative w-full h-[480px] sm:h-[550px] lg:h-[620px] xl:h-[660px] flex items-end justify-center z-10 overflow-visible">
               <Image
                 src="/vr_doctor.png"
                 alt="Dr. V.R. Dental Care & Dental Implant Centre"
@@ -180,13 +180,13 @@ export default function Hero() {
           </motion.div>
 
           {/* ========================================================= */}
-          {/* RIGHT SIDE — INFORMATION BLOCKS (25% Width -> lg:col-span-3) */}
+          {/* RIGHT SIDE — INFORMATION BLOCKS (~22-25% Width)          */}
           {/* ========================================================= */}
           <motion.div
             variants={rightStackVariant}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-3 flex flex-col gap-4 self-center py-6 order-3 lg:order-none"
+            className="flex flex-col gap-4 self-center py-6 order-3 lg:order-none"
           >
             {/* Information Block 1 */}
             <motion.div
@@ -199,9 +199,9 @@ export default function Hero() {
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
-                  Personalized
+                  PERSONALIZED
                 </span>
-                <span className="text-sm font-bold text-[#0F172A] mt-0.5 leading-snug">
+                <span className="text-sm font-bold text-[#111111] mt-0.5 leading-snug">
                   Dental Care
                 </span>
               </div>
@@ -218,9 +218,9 @@ export default function Hero() {
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
-                  Comfortable
+                  COMFORTABLE
                 </span>
-                <span className="text-sm font-bold text-[#0F172A] mt-0.5 leading-snug">
+                <span className="text-sm font-bold text-[#111111] mt-0.5 leading-snug">
                   Patient Experience
                 </span>
               </div>
@@ -237,9 +237,9 @@ export default function Hero() {
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
-                  Advanced
+                  ADVANCED
                 </span>
-                <span className="text-sm font-bold text-[#0F172A] mt-0.5 leading-snug">
+                <span className="text-sm font-bold text-[#111111] mt-0.5 leading-snug">
                   Dental Technology
                 </span>
               </div>
