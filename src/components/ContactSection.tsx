@@ -408,12 +408,7 @@ export default function ContactSection() {
             <ContactCard
               icon={Clock}
               title="Working Hours"
-              details={`Monday: 9 AM – 8 PM
-Tuesday: 9 AM – 8 PM
-Wednesday: 9 AM – 8 PM
-Thursday: 9 AM – 8 PM
-Friday: 9 AM – 8 PM
-Saturday: 9 AM – 8 PM
+              details={`Monday – Saturday: 9:00 AM – 8:00 PM
 Sunday: Closed`}
             />
           </div>

@@ -51,7 +51,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <span className="text-[12px] bg-primary/20 text-accent px-3.5 py-1 rounded-full font-semibold border border-primary/10 flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5" />
-              Hours: Mon – Sat: 9 AM – 8 PM (Sun Closed)
+              Hours: Monday – Saturday: 9:00 AM – 8:00 PM (Sunday: Closed)
             </span>
           </div>
         </div>
