@@ -36,16 +36,23 @@ function ContactCard({ icon: Icon, title, details }: ContactCardProps) {
           {title}
         </span>
         {title === "Email" ? (
-          <span className="text-sm font-semibold text-dark-text mt-1">
-            {details}
-          </span>
-        ) : title === "Reception & Booking" ? (
           <a
-            href={`tel:09885349798`}
+            href="mailto:VRdental.yanam@gmail.com"
             className="text-sm font-semibold text-dark-text mt-1 hover:text-primary transition-colors"
           >
             {details}
           </a>
+        ) : title === "Reception & Booking" ? (
+          <a
+            href="tel:09885349798"
+            className="text-sm font-semibold text-dark-text mt-1 hover:text-primary transition-colors"
+          >
+            {details}
+          </a>
+        ) : title === "Working Hours" ? (
+          <div className="text-sm font-semibold text-dark-text mt-1 leading-relaxed whitespace-pre-line">
+            {details}
+          </div>
         ) : (
           <span className="text-sm font-semibold text-dark-text mt-1 leading-relaxed">
             {details}
@@ -396,12 +403,18 @@ export default function ContactSection() {
             <ContactCard
               icon={Mail}
               title="Email"
-              details="[Clinic Email]"
+              details="VRdental.yanam@gmail.com"
             />
             <ContactCard
               icon={Clock}
               title="Working Hours"
-              details="[Working Hours]"
+              details={`Monday: 9 AM – 8 PM
+Tuesday: 9 AM – 8 PM
+Wednesday: 9 AM – 8 PM
+Thursday: 9 AM – 8 PM
+Friday: 9 AM – 8 PM
+Saturday: 9 AM – 8 PM
+Sunday: Closed`}
             />
           </div>
 

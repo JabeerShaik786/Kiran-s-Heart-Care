@@ -51,7 +51,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <span className="text-[12px] bg-primary/20 text-accent px-3.5 py-1 rounded-full font-semibold border border-primary/10 flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5" />
-              Hours: [Working Hours]
+              Hours: Mon – Sat: 9 AM – 8 PM (Sun Closed)
             </span>
           </div>
         </div>
@@ -128,7 +128,12 @@ export default function Footer() {
             </div>
             <div className="flex gap-3">
               <Mail className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <span>[Clinic Email]</span>
+              <a
+                href="mailto:VRdental.yanam@gmail.com"
+                className="hover:text-white transition-colors"
+              >
+                VRdental.yanam@gmail.com
+              </a>
             </div>
             <div className="flex gap-3">
               <MessageSquare className="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
