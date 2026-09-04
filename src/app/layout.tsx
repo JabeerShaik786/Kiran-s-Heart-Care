@@ -68,8 +68,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${manrope.variable} ${inter.variable} ${playfair.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-white text-[#0F172A] selection:bg-primary/30 font-sans">
+      <body
+        className="min-h-full flex flex-col bg-white text-[#0F172A] selection:bg-primary/30 font-sans relative z-0"
+        style={{ zIndex: 0 }}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>
