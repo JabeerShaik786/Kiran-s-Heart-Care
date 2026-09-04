@@ -187,7 +187,7 @@ export default function Hero() {
             variants={rightStackVariant}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-3 flex flex-col gap-4 self-center py-6"
+            className="lg:col-span-3 flex flex-col gap-4 self-center py-6 w-full max-w-md mx-auto lg:max-w-none"
           >
             {/* Information Block 1 */}
             <motion.div
