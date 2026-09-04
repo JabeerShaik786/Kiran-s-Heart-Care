@@ -25,6 +25,18 @@ const CLINIC_IMAGES = [
     alt: "V.R. Dental Care Dental Equipment",
     title: "Dental Equipment",
     desc: "State-of-the-art diagnostic and clinical equipment for precise care."
+  },
+  {
+    src: "/dental1.5.png",
+    alt: "V.R. Dental Care Sterilization Suite",
+    title: "Sterilization Suite",
+    desc: "Strict sterilization guidelines and clinical cleaning standards."
+  },
+  {
+    src: "/dental1.6.png",
+    alt: "V.R. Dental Care Consultation Room",
+    title: "Consultation Suite",
+    desc: "Private consultation area for personalized treatment discussions."
   }
 ];
 
