@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   Activity,
   Search,
@@ -25,6 +26,7 @@ interface Service {
   longDesc: string;
   indications: string[];
   preparation: string;
+  image: string;
 }
 
 const SERVICES: Service[] = [
@@ -36,6 +38,7 @@ const SERVICES: Service[] = [
     longDesc: "A root canal treatment removes infected or damaged pulp from inside a tooth, cleans and sanitizes the inner root canals, and seals them. This stops the spread of infection, relieves pain, and saves your natural tooth structure.",
     indications: ["Severe or persistent toothache", "Sensitivity to hot or cold temperatures", "Swelling or tenderness in surrounding gums", "Tooth discoloration"],
     preparation: "Eat a light meal prior to your appointment. Keep a list of any current medications and review them with the dentist.",
+    image: "/services/root-canal.jpg",
   },
   {
     id: 2,
@@ -45,6 +48,7 @@ const SERVICES: Service[] = [
     longDesc: "A comprehensive inspection utilizing manual probes and digital X-rays to locate dental decay, enamel erosion, and structural cracks early on, preventing more complex dental conditions.",
     indications: ["Tooth sensitivity to sweet or temperature changes", "Visible pits or holes in teeth", "Mild tooth discomfort while biting", "Routine checkups"],
     preparation: "Brush and floss your teeth before your visit. Arrive early to complete registration details.",
+    image: "/services/cavity-inspection.jpg",
   },
   {
     id: 3,
@@ -54,6 +58,7 @@ const SERVICES: Service[] = [
     longDesc: "Dental implants are titanium posts surgically placed into the jawbone, acting as artificial tooth roots. Once integrated, they support custom crowns, providing structural stability and a natural appearance.",
     indications: ["Single or multiple missing teeth", "Uncomfortable or loose dentures", "Desire to preserve jawbone structure and facial shape"],
     preparation: "Requires a prior 3D CBCT digital scan to assess bone density. Discuss any health conditions affecting bone healing.",
+    image: "/services/dental-implants.jpg",
   },
   {
     id: 4,
@@ -63,6 +68,7 @@ const SERVICES: Service[] = [
     longDesc: "Orthodontic therapies diagnose and correct crowded, misaligned, or crooked teeth and bite problems. Custom appliances are used to gently align your teeth over time, improving function and appearance.",
     indications: ["Crooked or crowded teeth", "Gaps between teeth", "Bite issues like overbites, underbites, or crossbites"],
     preparation: "Comprehensive diagnostic X-rays and mouth impressions will be taken during your consult.",
+    image: "/services/orthodontics.jpg",
   },
   {
     id: 5,
@@ -72,6 +78,7 @@ const SERVICES: Service[] = [
     longDesc: "Modern clear aligners offer a comfortable, removable, and transparent way to straighten teeth. These custom aligners gradually shift your teeth into the correct position without traditional brackets.",
     indications: ["Mild teeth crowding or spacing gaps", "Desire for transparent alignment options", "Correcting minor shifts in teeth position"],
     preparation: "Maintain excellent oral hygiene. Cleanings are recommended prior to aligner mapping.",
+    image: "/services/teeth-alignment.jpg",
   },
   {
     id: 6,
@@ -81,6 +88,7 @@ const SERVICES: Service[] = [
     longDesc: "Cosmetic dentistry enhances your smile using composite bonding, porcelain veneers, and gum reshaping. We analyze facial symmetry to design a balanced, natural-looking aesthetic.",
     indications: ["Chipped, worn, or slightly fractured teeth", "Minor gaps in front teeth", "Irregular tooth shapes or surface textures"],
     preparation: "A smile design consultation is held to align on expectations and explore treatment options.",
+    image: "/services/cosmetic-dentistry.jpg",
   },
   {
     id: 7,
@@ -90,6 +98,7 @@ const SERVICES: Service[] = [
     longDesc: "Professional whitening utilizes safe bleaching agents activated by clinical lights to remove deep-set stains on tooth enamel. It brightens your smile by multiple shades in one visit.",
     indications: ["Tooth yellowing or discoloration", "Dietary stains from coffee, tea, or red wine", "Aesthetic enhancement for upcoming events"],
     preparation: "It is recommended to have professional scaling done first for uniform whitening results.",
+    image: "/services/teeth-whitening.jpg",
   },
   {
     id: 8,
@@ -99,6 +108,7 @@ const SERVICES: Service[] = [
     longDesc: "General dentistry covers regular examinations, cleanings, preventive sealant applications, and tooth fillings. Regular general care is the best way to prevent cavities and maintain healthy gums.",
     indications: ["Routine dental examinations (every 6 months)", "Minor sensitivity or mouth discomfort", "Plaque and tartar removal"],
     preparation: "Brush your teeth before your visit. Bring details of any medical history or allergies.",
+    image: "/services/general-dentistry.jpg",
   },
 ];
 
@@ -148,13 +158,25 @@ export default function Services() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: Math.min(idx * 0.05, 0.4), ease: "easeOut" }}
                 whileHover={{ y: -6 }}
-                className="group p-8 rounded-3xl bg-[#F8FAFC] border border-borders/50 hover:border-primary/20 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col justify-between items-start text-left cursor-pointer min-h-[250px]"
+                className="group p-6 rounded-3xl bg-[#F8FAFC] border border-borders/50 hover:border-primary/20 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col justify-between items-start text-left cursor-pointer overflow-hidden"
                 onClick={() => setSelectedService(service)}
               >
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
-                    <Icon className="w-6 h-6" />
+                <div className="w-full">
+                  {/* Service Image */}
+                  <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100 border border-slate-200/60 shadow-inner group-hover:shadow-md transition-all duration-300">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      unoptimized
+                    />
+                    <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-white/90 backdrop-blur-md text-primary flex items-center justify-center shadow-md group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                      <Icon className="w-5 h-5" />
+                    </div>
                   </div>
+
                   <h3 className="font-heading font-extrabold text-xl text-dark-text tracking-tight mb-3 group-hover:text-primary transition-colors duration-200">
                     {service.title}
                   </h3>
@@ -190,31 +212,41 @@ export default function Services() {
                 className="bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl border border-borders relative flex flex-col max-h-[90vh]"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Header Banner */}
-                <div className="p-6 md:p-8 bg-gradient-to-r from-primary to-secondary text-white relative">
+                {/* Header Banner Image */}
+                <div className="relative w-full h-52 md:h-60 overflow-hidden shrink-0">
+                  <Image
+                    src={selectedService.image}
+                    alt={selectedService.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 700px"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex items-end p-6 md:p-8">
+                    <div className="flex items-center gap-4 text-white relative z-10">
+                      <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shrink-0">
+                        {(() => {
+                          const Icon = selectedService.icon;
+                          return <Icon className="w-6 h-6" />;
+                        })()}
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-bold tracking-widest uppercase text-white/80">
+                          Dental Treatment
+                        </span>
+                        <h4 className="font-heading font-extrabold text-2xl md:text-3xl text-white tracking-tight mt-0.5">
+                          {selectedService.title}
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200"
+                    className="absolute top-4 right-4 p-2.5 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md transition-colors duration-200 z-20"
                     aria-label="Close modal"
                   >
                     <X className="w-5 h-5" />
                   </button>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-white/20 text-white flex items-center justify-center shadow-inner">
-                      {(() => {
-                        const Icon = selectedService.icon;
-                        return <Icon className="w-6 h-6" />;
-                      })()}
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-bold tracking-widest uppercase text-white/70">
-                        Dental Treatment
-                      </span>
-                      <h4 className="font-heading font-extrabold text-2xl text-white tracking-tight mt-0.5">
-                        {selectedService.title}
-                      </h4>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Scrollable Body */}
