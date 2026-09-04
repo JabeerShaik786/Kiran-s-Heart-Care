@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, Quote, ExternalLink } from "lucide-react";
 
 interface Testimonial {
   id: number;
@@ -207,6 +207,19 @@ export default function Testimonials() {
               aria-label={`Go to slide ${idx + 1}`}
             />
           ))}
+        </div>
+
+        {/* Load More Reviews Button */}
+        <div className="flex justify-center mt-10">
+          <a
+            href="https://www.google.com/search?q=vr+dental+clinic+yanam&rlz=1C1ONGR_en-GBIN1218IN1220&oq=vr&gs_lcrp=EgZjaHJvbWUqBggDEEUYOzIGCAAQRRg5Mg0IARAAGIMBGLEDGIAEMgoIAhAAGLEDGIAEMgYIAhAAGDsyBggEEEUYOzIGCAUQRRg8MgYIBhBFGD0yBggHEEUYPNIBCDI1NTlqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0x3a37f5629e08049d:0x57e44639afd7d3a6,1,,,,"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-white text-sm md:text-base font-bold rounded-xl shadow-md shadow-primary/15 hover:bg-secondary hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 cursor-pointer"
+          >
+            <span>Load More Reviews</span>
+            <ExternalLink className="w-4 h-4 text-white" />
+          </a>
         </div>
       </div>
     </section>
