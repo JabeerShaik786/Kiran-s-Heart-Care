@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 import path from "path";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const isProd = process.env.NODE_ENV === "production";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (isProd ? "/Kiran-s-Heart-Care" : "");
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -10,6 +11,9 @@ const nextConfig: NextConfig = {
   },
   basePath: basePath ? basePath : undefined,
   assetPrefix: basePath ? basePath : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   turbopack: {
     root: path.resolve(__dirname),
   },

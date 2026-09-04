@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Calendar, Phone, UserCheck, HeartHandshake, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 
 export default function Hero() {
   const scrollToAppointment = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -169,7 +170,7 @@ export default function Hero() {
             {/* Doctor Image Container (Bottom Aligned, Transparent PNG, Head-to-Torso visible) */}
             <div className="relative w-full h-[480px] sm:h-[550px] lg:h-[620px] xl:h-[660px] flex items-end justify-center z-10 overflow-visible">
               <Image
-                src="/doctor.png"
+                src={getAssetPath("/doctor.png")}
                 alt="Dr. V.R. Dental Care & Dental Implant Centre"
                 width={560}
                 height={700}

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen } from "lucide-react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 
 interface BlogPost {
   id: number;
@@ -15,42 +16,42 @@ interface BlogPost {
 const ARTICLES: BlogPost[] = [
   {
     id: 1,
-    image: "/healthy_smile.jpg",
+    image: getAssetPath("/healthy_smile.jpg"),
     category: "Oral Hygiene",
     title: "How to Maintain Healthy Teeth Every Day",
     shortDesc: "A complete guide on essential habits, correct brushing methods, and minor dietary changes to preserve your teeth health every day.",
   },
   {
     id: 2,
-    image: "/dental_checkup.jpg",
+    image: getAssetPath("/dental_checkup.jpg"),
     category: "Treatments",
     title: "When Do You Need a Root Canal?",
     shortDesc: "Recognizing key clinical signs, symptoms, and warning indicators that suggest a root canal is needed to protect a damaged tooth.",
   },
   {
     id: 3,
-    image: "/healthy_smile.jpg",
+    image: getAssetPath("/healthy_smile.jpg"),
     category: "Oral Health",
     title: "How to Prevent Cavities",
     shortDesc: "Understanding the underlying mechanics of tooth decay and adopting simple, active daily habits to keep your enamel strong.",
   },
   {
     id: 4,
-    image: "/dental_checkup.jpg",
+    image: getAssetPath("/dental_checkup.jpg"),
     category: "Prevention",
     title: "Importance of Regular Dental Checkups",
     shortDesc: "Why regular biannual examinations and professional dental cleanings are the absolute foundation of long-term oral wellness.",
   },
   {
     id: 5,
-    image: "/dental_checkup.jpg",
+    image: getAssetPath("/dental_checkup.jpg"),
     category: "Dental Implants",
     title: "Understanding Dental Implants",
     shortDesc: "Exploring titanium posts, surgical placement, and how they offer a permanent, natural-looking replacement for missing teeth.",
   },
   {
     id: 6,
-    image: "/healthy_smile.jpg",
+    image: getAssetPath("/healthy_smile.jpg"),
     category: "Cosmetic",
     title: "What Is Cosmetic Dentistry?",
     shortDesc: "Exploring smile design elements, dental bonding, teeth whitening options, and custom treatments to enhance smile aesthetics.",

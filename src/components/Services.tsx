@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import {
   Activity,
   Search,
@@ -38,7 +39,7 @@ const SERVICES: Service[] = [
     longDesc: "A root canal treatment removes infected or damaged pulp from inside a tooth, cleans and sanitizes the inner root canals, and seals them. This stops the spread of infection, relieves pain, and saves your natural tooth structure.",
     indications: ["Severe or persistent toothache", "Sensitivity to hot or cold temperatures", "Swelling or tenderness in surrounding gums", "Tooth discoloration"],
     preparation: "Eat a light meal prior to your appointment. Keep a list of any current medications and review them with the dentist.",
-    image: "/services/root-canal.jpg",
+    image: getAssetPath("/services/root-canal.jpg"),
   },
   {
     id: 2,
@@ -48,7 +49,7 @@ const SERVICES: Service[] = [
     longDesc: "A comprehensive inspection utilizing manual probes and digital X-rays to locate dental decay, enamel erosion, and structural cracks early on, preventing more complex dental conditions.",
     indications: ["Tooth sensitivity to sweet or temperature changes", "Visible pits or holes in teeth", "Mild tooth discomfort while biting", "Routine checkups"],
     preparation: "Brush and floss your teeth before your visit. Arrive early to complete registration details.",
-    image: "/services/cavity-inspection.jpg",
+    image: getAssetPath("/services/cavity-inspection.jpg"),
   },
   {
     id: 3,
@@ -58,7 +59,7 @@ const SERVICES: Service[] = [
     longDesc: "Dental implants are titanium posts surgically placed into the jawbone, acting as artificial tooth roots. Once integrated, they support custom crowns, providing structural stability and a natural appearance.",
     indications: ["Single or multiple missing teeth", "Uncomfortable or loose dentures", "Desire to preserve jawbone structure and facial shape"],
     preparation: "Requires a prior 3D CBCT digital scan to assess bone density. Discuss any health conditions affecting bone healing.",
-    image: "/services/dental-implants.jpg",
+    image: getAssetPath("/services/dental-implants.jpg"),
   },
   {
     id: 4,
@@ -68,7 +69,7 @@ const SERVICES: Service[] = [
     longDesc: "Orthodontic therapies diagnose and correct crowded, misaligned, or crooked teeth and bite problems. Custom appliances are used to gently align your teeth over time, improving function and appearance.",
     indications: ["Crooked or crowded teeth", "Gaps between teeth", "Bite issues like overbites, underbites, or crossbites"],
     preparation: "Comprehensive diagnostic X-rays and mouth impressions will be taken during your consult.",
-    image: "/services/orthodontics.jpg",
+    image: getAssetPath("/services/orthodontics.jpg"),
   },
   {
     id: 5,
@@ -78,7 +79,7 @@ const SERVICES: Service[] = [
     longDesc: "Modern clear aligners offer a comfortable, removable, and transparent way to straighten teeth. These custom aligners gradually shift your teeth into the correct position without traditional brackets.",
     indications: ["Mild teeth crowding or spacing gaps", "Desire for transparent alignment options", "Correcting minor shifts in teeth position"],
     preparation: "Maintain excellent oral hygiene. Cleanings are recommended prior to aligner mapping.",
-    image: "/services/teeth-alignment.jpg",
+    image: getAssetPath("/services/teeth-alignment.jpg"),
   },
   {
     id: 6,
@@ -88,7 +89,7 @@ const SERVICES: Service[] = [
     longDesc: "Cosmetic dentistry enhances your smile using composite bonding, porcelain veneers, and gum reshaping. We analyze facial symmetry to design a balanced, natural-looking aesthetic.",
     indications: ["Chipped, worn, or slightly fractured teeth", "Minor gaps in front teeth", "Irregular tooth shapes or surface textures"],
     preparation: "A smile design consultation is held to align on expectations and explore treatment options.",
-    image: "/services/cosmetic-dentistry.jpg",
+    image: getAssetPath("/services/cosmetic-dentistry.jpg"),
   },
   {
     id: 7,
@@ -98,7 +99,7 @@ const SERVICES: Service[] = [
     longDesc: "Professional whitening utilizes safe bleaching agents activated by clinical lights to remove deep-set stains on tooth enamel. It brightens your smile by multiple shades in one visit.",
     indications: ["Tooth yellowing or discoloration", "Dietary stains from coffee, tea, or red wine", "Aesthetic enhancement for upcoming events"],
     preparation: "It is recommended to have professional scaling done first for uniform whitening results.",
-    image: "/services/teeth-whitening.jpg",
+    image: getAssetPath("/services/teeth-whitening.jpg"),
   },
   {
     id: 8,
@@ -108,7 +109,7 @@ const SERVICES: Service[] = [
     longDesc: "General dentistry covers regular examinations, cleanings, preventive sealant applications, and tooth fillings. Regular general care is the best way to prevent cavities and maintain healthy gums.",
     indications: ["Routine dental examinations (every 6 months)", "Minor sensitivity or mouth discomfort", "Plaque and tartar removal"],
     preparation: "Brush your teeth before your visit. Bring details of any medical history or allergies.",
-    image: "/services/general-dentistry.jpg",
+    image: getAssetPath("/services/general-dentistry.jpg"),
   },
 ];
 

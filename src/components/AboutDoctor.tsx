@@ -4,36 +4,37 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, Smile } from "lucide-react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 
 type TabType = "about" | "highlights" | "technology";
 
 const CLINIC_IMAGES = [
   {
-    src: "/dental1.2.png",
+    src: getAssetPath("/dental1.2.png"),
     alt: "V.R. Dental Care Clinic Reception",
     title: "Clinic Reception",
     desc: "A warm, welcoming, and clean reception area designed for patient comfort."
   },
   {
-    src: "/dental1.3.png",
+    src: getAssetPath("/dental1.3.png"),
     alt: "V.R. Dental Care Dental Treatment Room",
     title: "Dental Treatment Room",
     desc: "Modern and hygienic operatory suites equipped for gentle treatments."
   },
   {
-    src: "/dental1.4.png",
+    src: getAssetPath("/dental1.4.png"),
     alt: "V.R. Dental Care Dental Equipment",
     title: "Dental Equipment",
     desc: "State-of-the-art diagnostic and clinical equipment for precise care."
   },
   {
-    src: "/dental1.5.png",
+    src: getAssetPath("/dental1.5.png"),
     alt: "V.R. Dental Care Sterilization Suite",
     title: "Sterilization Suite",
     desc: "Strict sterilization guidelines and clinical cleaning standards."
   },
   {
-    src: "/dental1.6.png",
+    src: getAssetPath("/dental1.6.png"),
     alt: "V.R. Dental Care Consultation Room",
     title: "Consultation Suite",
     desc: "Private consultation area for personalized treatment discussions."

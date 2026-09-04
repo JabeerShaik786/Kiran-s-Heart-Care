@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Phone, Calendar, Smile } from "lucide-react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 
 export default function AppointmentCTA() {
   const handleScrollToBooking = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -67,7 +68,7 @@ export default function AppointmentCTA() {
           {/* Doctor Portrait Column */}
           <div className="lg:col-span-4 relative flex items-center justify-center h-[320px] md:h-[380px] lg:h-[420px] w-full overflow-hidden">
             <Image
-              src="/doctor.png"
+              src={getAssetPath("/doctor.png")}
               alt="Dr. V.R. Dental Care & Dental Implant Centre"
               width={380}
               height={480}
