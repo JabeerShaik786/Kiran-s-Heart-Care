@@ -3,11 +3,23 @@ export const getAssetPath = (path: string): string => {
   if (path.startsWith("http://") || path.startsWith("https://") || path.startsWith("data:")) {
     return path;
   }
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
-  
-  if (basePath && cleanPath.startsWith(basePath)) {
+  const basePath = "/Kiran-s-Heart-Care";
+
+  if (cleanPath.startsWith(basePath)) {
     return cleanPath;
   }
-  return `${basePath}${cleanPath}`;
+
+  if (typeof window !== "undefined") {
+    if (window.location.pathname.startsWith(basePath) || window.location.hostname.endsWith("github.io")) {
+      return `${basePath}${cleanPath}`;
+    }
+  }
+
+  if (process.env.NODE_ENV === "production") {
+    return `${basePath}${cleanPath}`;
+  }
+
+  return cleanPath;
 };
