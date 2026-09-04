@@ -65,20 +65,20 @@ export default function PatientJourney() {
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>
 
-        {/* Desktop Horizontal Timeline */}
-        <div className="hidden lg:block relative w-full px-6 py-10">
-          {/* Horizontal connecting SVG Line */}
-          <div className="absolute top-[80px] left-[10%] right-[10%] h-[4px] -z-10 bg-slate-100 rounded-full overflow-hidden">
+        {/* Desktop / Tablet Horizontal Timeline */}
+        <div className="hidden md:block relative w-full px-4 md:px-6 py-10">
+          {/* Thin 2px Horizontal connecting Line */}
+          <div className="absolute top-[80px] left-[7%] right-[7%] h-[2px] z-0 bg-[#087CE2]/20 rounded-full overflow-hidden">
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 2, ease: "easeInOut" }}
-              className="h-full bg-gradient-to-r from-primary via-secondary to-accent origin-left"
+              transition={{ duration: 1.8, ease: "easeInOut" }}
+              className="h-full bg-gradient-to-r from-[#087CE2]/30 via-[#087CE2] to-[#087CE2]/30 origin-left"
             />
           </div>
 
-          <div className="grid grid-cols-6 gap-6 relative z-10">
+          <div className="grid grid-cols-6 gap-4 lg:gap-6 relative z-10">
             {STEPS.map((step, idx) => {
               const Icon = step.icon;
               return (
@@ -87,21 +87,21 @@ export default function PatientJourney() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: idx * 0.15, ease: "easeOut" }}
+                  transition={{ duration: 0.6, delay: idx * 0.12, ease: "easeOut" }}
                   className="flex flex-col items-center text-center group"
                 >
-                  {/* Step bubble */}
-                  <div className="relative w-20 h-20 rounded-full bg-white border-2 border-slate-100 text-primary flex items-center justify-center shadow-lg group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 cursor-pointer">
+                  {/* Step bubble (solid white background sits on top of line) */}
+                  <div className="relative z-10 w-20 h-20 rounded-full bg-white border-2 border-slate-100 text-primary flex items-center justify-center shadow-lg group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 cursor-pointer">
                     <Icon className="w-8 h-8" />
                     
                     {/* Index Indicator */}
-                    <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-secondary text-white font-heading font-extrabold text-[11px] flex items-center justify-center border-2 border-white shadow-sm">
+                    <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-secondary text-white font-heading font-extrabold text-[11px] flex items-center justify-center border-2 border-white shadow-sm z-20">
                       {step.id}
                     </div>
                   </div>
 
                   {/* Step description */}
-                  <h3 className="font-heading font-extrabold text-base text-dark-text tracking-tight mt-6 mb-2 group-hover:text-primary transition-colors duration-200">
+                  <h3 className="font-heading font-extrabold text-sm lg:text-base text-dark-text tracking-tight mt-6 mb-2 group-hover:text-primary transition-colors duration-200">
                     {step.title}
                   </h3>
                   <p className="text-gray-text text-xs leading-relaxed max-w-[180px] font-normal">
@@ -114,15 +114,15 @@ export default function PatientJourney() {
         </div>
 
         {/* Mobile Vertical Stepper */}
-        <div className="lg:hidden flex flex-col gap-10 items-stretch relative pl-8 text-left">
+        <div className="md:hidden flex flex-col gap-10 items-stretch relative pl-8 text-left">
           {/* Vertical connecting line */}
-          <div className="absolute top-4 bottom-4 left-[20px] w-[3px] -z-10 bg-slate-100 rounded-full overflow-hidden">
+          <div className="absolute top-4 bottom-4 left-[20px] w-[2px] z-0 bg-[#087CE2]/20 rounded-full overflow-hidden">
             <motion.div
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="w-full h-full bg-gradient-to-b from-primary via-secondary to-accent origin-top"
+              className="w-full h-full bg-gradient-to-b from-[#087CE2]/30 via-[#087CE2] to-[#087CE2]/30 origin-top"
             />
           </div>
 
@@ -140,7 +140,7 @@ export default function PatientJourney() {
                 {/* Bubble */}
                 <div className="w-11 h-11 rounded-2xl bg-white border border-slate-200 text-primary flex items-center justify-center shrink-0 shadow-md relative z-10 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                   <Icon className="w-5 h-5" />
-                  <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary text-white font-heading font-bold text-[9px] flex items-center justify-center border border-white">
+                  <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary text-white font-heading font-bold text-[9px] flex items-center justify-center border border-white z-20">
                     {step.id}
                   </div>
                 </div>
