@@ -30,7 +30,7 @@ export default function FloatingButtons() {
         transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-6 right-6 z-40 flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-xl shadow-green-500/20 text-white cursor-pointer hover:bg-green-600 transition-colors duration-200"
+        className="fixed bottom-20 right-4 sm:right-6 lg:bottom-6 lg:right-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-xl shadow-green-500/20 text-white cursor-pointer hover:bg-green-600 transition-colors duration-200"
         title="Chat on WhatsApp"
       >
         <svg
