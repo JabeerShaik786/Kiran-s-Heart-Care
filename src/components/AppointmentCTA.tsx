@@ -65,18 +65,16 @@ export default function AppointmentCTA() {
           </div>
 
           {/* Doctor Portrait Column */}
-          <div className="hidden lg:block lg:col-span-4 relative self-end h-[420px] w-full">
-            <div className="absolute bottom-[-80px] right-0 w-[300px] h-[450px] overflow-hidden rounded-t-[32px] shadow-2xl">
-              <Image
-                src="/dentist_portrait.jpg"
-                alt="Clinic Dentist"
-                fill
-                className="object-cover object-top"
-                sizes="300px"
-              />
-              {/* Fade gradient from bottom to top to make dentist blend into layout */}
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-80" />
-            </div>
+          <div className="lg:col-span-4 relative flex items-center justify-center h-[320px] md:h-[380px] lg:h-[420px] w-full overflow-hidden">
+            <Image
+              src="/doctor.png"
+              alt="Dr. V.R. Dental Care & Dental Implant Centre"
+              width={380}
+              height={480}
+              className="object-contain object-center max-h-full drop-shadow-2xl"
+              priority
+              unoptimized
+            />
           </div>
         </div>
       </div>
