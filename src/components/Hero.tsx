@@ -93,11 +93,11 @@ export default function Hero() {
             className="lg:col-span-4 flex flex-col items-start text-left self-center py-6"
           >
             {/* Clinic Heading */}
-            <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-7">
-              <span className="font-sans font-bold text-lg sm:text-xl md:text-[22px] lg:text-[24px] tracking-[0.18em] text-[#087CE2] uppercase leading-tight caret-transparent">
+            <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-5">
+              <span className="font-sans font-bold text-lg sm:text-xl md:text-[22px] lg:text-[24px] tracking-[0.12em] text-[#087CE2] uppercase leading-tight caret-transparent">
                 V.R. DENTAL CARE
               </span>
-              <span className="font-sans font-semibold text-xs sm:text-sm md:text-base tracking-[0.14em] text-[#64748B] uppercase leading-snug">
+              <span className="font-sans font-semibold text-xs sm:text-sm md:text-base tracking-[0.10em] text-[#64748B] uppercase leading-snug">
                 & DENTAL IMPLANT CENTRE
               </span>
             </motion.div>
@@ -105,7 +105,7 @@ export default function Hero() {
             {/* Main Headline */}
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[54px] leading-[1.08] text-[#111111] tracking-tight mb-6"
+              className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.08] text-[#111111] tracking-tight mb-6"
             >
               <span className="font-sans font-bold block">
                 Transforming Smiles,
