@@ -150,7 +150,6 @@ export default function Services() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service, idx) => {
-            const Icon = service.icon;
             return (
               <motion.div
                 key={service.id}
@@ -173,9 +172,6 @@ export default function Services() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       unoptimized
                     />
-                    <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-white/90 backdrop-blur-md text-primary flex items-center justify-center shadow-md group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                      <Icon className="w-5 h-5" />
-                    </div>
                   </div>
 
                   <h3 className="font-heading font-extrabold text-xl text-dark-text tracking-tight mb-3 group-hover:text-primary transition-colors duration-200">
