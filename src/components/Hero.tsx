@@ -94,10 +94,10 @@ export default function Hero() {
           >
             {/* Small Clinic Heading */}
             <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-5">
-              <span className="text-[11px] md:text-[12px] font-extrabold tracking-[0.2em] text-[#087CE2] uppercase leading-tight">
+              <span className="text-base md:text-lg lg:text-xl font-extrabold tracking-[0.2em] text-[#087CE2] uppercase leading-tight">
                 V.R. DENTAL CARE
               </span>
-              <span className="text-[10px] md:text-[11px] font-semibold tracking-[0.15em] text-[#64748B] uppercase leading-none">
+              <span className="text-xs md:text-sm lg:text-base font-semibold tracking-[0.15em] text-[#64748B] uppercase leading-none">
                 & DENTAL IMPLANT CENTRE
               </span>
             </motion.div>
@@ -112,14 +112,6 @@ export default function Hero() {
                 Transforming Lives
               </span>
             </motion.h1>
-
-            {/* Supporting Text */}
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-xs sm:text-sm text-[#475569] leading-relaxed max-w-md font-normal mb-8"
-            >
-              Providing professional, personalized, and comfortable dental care with modern technology and a patient-first approach.
-            </motion.p>
 
             {/* Action Buttons (Appointment & Call) */}
             <motion.div
