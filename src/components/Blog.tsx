@@ -35,27 +35,6 @@ const ARTICLES: BlogPost[] = [
     title: "How to Prevent Cavities",
     shortDesc: "Understanding the underlying mechanics of tooth decay and adopting simple, active daily habits to keep your enamel strong.",
   },
-  {
-    id: 4,
-    image: getAssetPath("/dental_checkup.jpg"),
-    category: "Prevention",
-    title: "Importance of Regular Dental Checkups",
-    shortDesc: "Why regular biannual examinations and professional dental cleanings are the absolute foundation of long-term oral wellness.",
-  },
-  {
-    id: 5,
-    image: getAssetPath("/dental_checkup.jpg"),
-    category: "Dental Implants",
-    title: "Understanding Dental Implants",
-    shortDesc: "Exploring titanium posts, surgical placement, and how they offer a permanent, natural-looking replacement for missing teeth.",
-  },
-  {
-    id: 6,
-    image: getAssetPath("/healthy_smile.jpg"),
-    category: "Cosmetic",
-    title: "What Is Cosmetic Dentistry?",
-    shortDesc: "Exploring smile design elements, dental bonding, teeth whitening options, and custom treatments to enhance smile aesthetics.",
-  },
 ];
 
 export default function Blog() {

@@ -100,44 +100,9 @@ export default function ContactSection() {
           <div className="h-[3px] w-12 bg-primary rounded-full mt-6" />
         </div>
 
-        {/* Grid Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24">
-          
-          {/* Left Column (40% width -> lg:col-span-5) */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            whileHover={{ y: -4 }}
-            className="lg:col-span-5 w-full flex justify-center lg:justify-start group transition-all duration-300 relative"
-          >
-            <div className="relative rounded-[24px] overflow-hidden border border-white/60 shadow-[0_30px_80px_rgba(15,23,42,0.12)] group-hover:shadow-[0_40px_90px_rgba(15,23,42,0.18)] transition-all duration-300 aspect-[4/5] w-full max-w-[420px]">
-              <Image
-                src="/dentist_portrait.jpg"
-                alt="V.R. Dental Care & Dental Implant Centre Portrait"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                priority
-              />
-              {/* Floating glass info card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/85 backdrop-blur-md p-5 rounded-[20px] shadow-lg border border-white/30 flex items-start gap-3.5 z-10">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                  <Smile className="w-5 h-5 text-primary" />
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-sm font-extrabold text-slate-800 leading-tight">V.R. Dental Care & Dental Implant Centre</span>
-                  <span className="text-xs text-slate-600 font-semibold mt-0.5">Transforming Smiles, Transforming Lives</span>
-                  <span className="text-[11px] text-primary font-bold mt-1.5 tracking-wider uppercase">Professional Care</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Column (60% width -> lg:col-span-7) */}
-          <div className="lg:col-span-7 w-full">
-            <div className="rounded-[28px] p-8 md:p-12 bg-white border border-borders/60 shadow-xl shadow-primary/[0.01] relative min-h-[580px] flex flex-col justify-center">
+        {/* Form Container */}
+        <div className="max-w-[800px] mx-auto w-full mb-24">
+          <div className="rounded-[28px] p-8 md:p-12 bg-white border border-borders/60 shadow-xl shadow-primary/[0.01] relative min-h-[580px] flex flex-col justify-center">
               
               <AnimatePresence mode="wait">
                 {!isSubmitted ? (
@@ -365,7 +330,6 @@ export default function ContactSection() {
           </div>
 
         </div>
-      </div>
 
       {/* SECTION 2: Map + Contact Information Stack */}
       <div id="contact" className="max-w-[1320px] mx-auto px-6 md:px-8 border-t border-borders/60 pt-24">
