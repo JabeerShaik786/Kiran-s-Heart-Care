@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Smile, Phone } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Phone } from "lucide-react";
+import { getAssetPath } from "@/lib/getAssetPath";
 
 const NAV_ITEMS = [
   { name: "Home", href: "#home" },
@@ -106,28 +108,15 @@ export default function Navbar() {
               onClick={(e) => scrollToSection(e, "#home")}
               className="flex items-center gap-2 group cursor-pointer"
             >
-              <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary">
-                <motion.div
-                  animate={{
-                    scale: [1, 1.12, 1],
-                  }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 1.5,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <Smile className="w-4 h-4 text-primary" />
-                </motion.div>
-              </div>
-              <div className="flex flex-col text-left">
-                <span className="font-heading font-extrabold text-[12px] md:text-sm tracking-tight text-primary leading-tight uppercase">
-                  V.R. Dental Care
-                </span>
-                <span className="font-sans font-medium text-[7px] tracking-[0.05em] text-gray-text uppercase leading-none mt-0.5">
-                  & Dental Implant Centre
-                </span>
-              </div>
+              <Image
+                src={getAssetPath("/logo.png")}
+                alt="V.R. Dental Care & Dental Implant Centre"
+                width={180}
+                height={48}
+                className="h-10 md:h-12 w-auto object-contain"
+                priority
+                unoptimized
+              />
             </a>
           </div>
 
