@@ -72,7 +72,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[92vh] lg:min-h-screen w-full flex items-center pt-28 pb-16 lg:pb-0 overflow-hidden bg-white"
+      className="relative min-h-[90vh] lg:min-h-screen w-full flex items-center pt-24 md:pt-26 lg:pt-28 pb-12 lg:pb-0 overflow-hidden bg-white"
     >
       {/* Extremely Subtle Editorial Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_40%,#000_60%,transparent_100%)] opacity-35 pointer-events-none" />
@@ -93,11 +93,11 @@ export default function Hero() {
             className="lg:col-span-4 flex flex-col items-start text-left self-center py-6"
           >
             {/* Clinic Heading */}
-            <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1.5 mb-6">
-              <span className="text-xl sm:text-2xl md:text-[26px] font-extrabold tracking-[0.18em] text-[#087CE2] uppercase leading-tight">
+            <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-7">
+              <span className="text-lg sm:text-xl md:text-[22px] lg:text-[24px] font-extrabold tracking-[0.16em] text-[#087CE2] uppercase leading-tight caret-transparent">
                 V.R. DENTAL CARE
               </span>
-              <span className="text-sm sm:text-base md:text-lg font-bold tracking-[0.14em] text-[#64748B] uppercase leading-snug">
+              <span className="text-xs sm:text-sm md:text-base font-semibold tracking-[0.14em] text-[#64748B] uppercase leading-snug">
                 & DENTAL IMPLANT CENTRE
               </span>
             </motion.div>
@@ -154,13 +154,13 @@ export default function Hero() {
             variants={doctorVariant}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-5 relative w-full flex flex-col items-center justify-end self-end mt-4 lg:mt-0"
+            className="lg:col-span-5 relative w-full flex flex-col items-center justify-end self-end mt-4 lg:mt-0 lg:pl-4"
           >
             {/* Subtle Soft Blue Glow behind Doctor */}
             <div className="absolute bottom-8 w-[75%] h-[65%] bg-[#087CE2]/12 rounded-full blur-[95px] pointer-events-none" />
 
             {/* Doctor Image Container (Bottom Aligned, Transparent PNG, Head-to-Torso visible) */}
-            <div className="relative w-full h-[480px] sm:h-[550px] lg:h-[620px] xl:h-[660px] flex items-end justify-center z-10 overflow-visible">
+            <div className="relative w-full h-[440px] sm:h-[500px] lg:h-[570px] xl:h-[610px] flex items-end justify-center z-10 overflow-visible">
               <Image
                 src={getAssetPath("/doctor.png")}
                 alt="Dr. V.R. Dental Care & Dental Implant Centre"
@@ -180,13 +180,13 @@ export default function Hero() {
             variants={rightStackVariant}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-3 flex flex-col gap-4 self-center py-6 w-full max-w-md mx-auto lg:max-w-none"
+            className="lg:col-span-3 flex flex-col gap-3.5 sm:gap-4 self-center py-6 w-full max-w-md mx-auto lg:max-w-none"
           >
             {/* Information Block 1 */}
             <motion.div
               variants={rightItemVariant}
               whileHover={{ x: 4, transition: { duration: 0.2 } }}
-              className="p-5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
+              className="p-4 sm:p-4.5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
             >
               <div className="w-10 h-10 rounded-xl bg-[#087CE2]/10 text-[#087CE2] flex items-center justify-center shrink-0 mt-0.5">
                 <UserCheck className="w-5 h-5 text-[#087CE2]" />
@@ -205,7 +205,7 @@ export default function Hero() {
             <motion.div
               variants={rightItemVariant}
               whileHover={{ x: 4, transition: { duration: 0.2 } }}
-              className="p-5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
+              className="p-4 sm:p-4.5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
             >
               <div className="w-10 h-10 rounded-xl bg-[#087CE2]/10 text-[#087CE2] flex items-center justify-center shrink-0 mt-0.5">
                 <HeartHandshake className="w-5 h-5 text-[#087CE2]" />
@@ -224,7 +224,7 @@ export default function Hero() {
             <motion.div
               variants={rightItemVariant}
               whileHover={{ x: 4, transition: { duration: 0.2 } }}
-              className="p-5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
+              className="p-4 sm:p-4.5 rounded-2xl bg-white border border-slate-200/70 shadow-sm shadow-slate-100 flex items-start gap-4 transition-all duration-300 hover:border-[#087CE2]/30 hover:shadow-md"
             >
               <div className="w-10 h-10 rounded-xl bg-[#087CE2]/10 text-[#087CE2] flex items-center justify-center shrink-0 mt-0.5">
                 <Sparkles className="w-5 h-5 text-[#087CE2]" />
