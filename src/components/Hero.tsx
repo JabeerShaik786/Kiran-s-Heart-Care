@@ -94,10 +94,10 @@ export default function Hero() {
           >
             {/* Clinic Heading */}
             <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-7">
-              <span className="text-lg sm:text-xl md:text-[22px] lg:text-[24px] font-extrabold tracking-[0.16em] text-[#087CE2] uppercase leading-tight caret-transparent">
+              <span className="font-sans font-bold text-lg sm:text-xl md:text-[22px] lg:text-[24px] tracking-[0.18em] text-[#087CE2] uppercase leading-tight caret-transparent">
                 V.R. DENTAL CARE
               </span>
-              <span className="text-xs sm:text-sm md:text-base font-semibold tracking-[0.14em] text-[#64748B] uppercase leading-snug">
+              <span className="font-sans font-semibold text-xs sm:text-sm md:text-base tracking-[0.14em] text-[#64748B] uppercase leading-snug">
                 & DENTAL IMPLANT CENTRE
               </span>
             </motion.div>
@@ -105,10 +105,12 @@ export default function Hero() {
             {/* Main Headline */}
             <motion.h1
               variants={fadeUpVariant}
-              className="font-serif text-4xl sm:text-5xl lg:text-[48px] xl:text-[54px] leading-[1.08] text-[#111111] tracking-tight font-bold mb-6"
+              className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[54px] leading-[1.08] text-[#111111] tracking-tight mb-6"
             >
-              Transforming Smiles,<br />
-              <span className="text-[#087CE2] font-serif italic block mt-1">
+              <span className="font-sans font-bold block">
+                Transforming Smiles,
+              </span>
+              <span className="font-serif italic font-bold text-[#087CE2] block mt-1">
                 Transforming Lives
               </span>
             </motion.h1>
@@ -121,7 +123,7 @@ export default function Hero() {
               <a
                 href="#appointment"
                 onClick={scrollToAppointment}
-                className="px-6 py-3.5 bg-[#087CE2] text-white text-sm font-bold rounded-xl shadow-md shadow-[#087CE2]/15 hover:bg-[#066bbd] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                className="px-6 py-3.5 bg-[#087CE2] text-white text-sm font-sans font-bold rounded-xl shadow-md shadow-[#087CE2]/15 hover:bg-[#066bbd] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Calendar className="w-4 h-4 text-white" />
                 <span>Book Appointment</span>
@@ -129,7 +131,7 @@ export default function Hero() {
 
               <a
                 href="tel:09885349798"
-                className="px-5 py-3.5 bg-white border border-slate-200 text-[#0F172A] hover:text-[#087CE2] hover:border-[#087CE2]/40 text-sm font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-xs"
+                className="px-5 py-3.5 bg-white border border-slate-200 text-[#0F172A] hover:text-[#087CE2] hover:border-[#087CE2]/40 text-sm font-sans font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-xs"
               >
                 <Phone className="w-4 h-4 text-[#087CE2]" />
                 <span>Call 098853 49798</span>
@@ -141,7 +143,7 @@ export default function Hero() {
               variants={fadeUpVariant}
               className="pt-4 border-t border-slate-200/80 w-full max-w-md"
             >
-              <p className="text-xs italic text-slate-400 font-medium tracking-wide">
+              <p className="font-sans text-xs italic text-slate-400 font-medium tracking-wide">
                 "Every smile deserves thoughtful care."
               </p>
             </motion.div>
@@ -192,10 +194,10 @@ export default function Hero() {
                 <UserCheck className="w-5 h-5 text-[#087CE2]" />
               </div>
               <div className="flex flex-col text-left">
-                <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
+                <span className="font-sans text-[11px] font-bold tracking-wider text-[#087CE2] uppercase leading-snug">
                   PERSONALIZED
                 </span>
-                <span className="text-sm font-bold text-[#111111] mt-0.5 leading-snug">
+                <span className="font-sans text-sm font-bold text-[#111111] mt-0.5 leading-snug">
                   Dental Care
                 </span>
               </div>
@@ -211,10 +213,10 @@ export default function Hero() {
                 <HeartHandshake className="w-5 h-5 text-[#087CE2]" />
               </div>
               <div className="flex flex-col text-left">
-                <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
+                <span className="font-sans text-[11px] font-bold tracking-wider text-[#087CE2] uppercase leading-snug">
                   COMFORTABLE
                 </span>
-                <span className="text-sm font-bold text-[#111111] mt-0.5 leading-snug">
+                <span className="font-sans text-sm font-bold text-[#111111] mt-0.5 leading-snug">
                   Patient Experience
                 </span>
               </div>
@@ -230,10 +232,10 @@ export default function Hero() {
                 <Sparkles className="w-5 h-5 text-[#087CE2]" />
               </div>
               <div className="flex flex-col text-left">
-                <span className="text-[11px] font-extrabold tracking-wider text-[#087CE2] uppercase leading-snug">
+                <span className="font-sans text-[11px] font-bold tracking-wider text-[#087CE2] uppercase leading-snug">
                   ADVANCED
                 </span>
-                <span className="text-sm font-bold text-[#111111] mt-0.5 leading-snug">
+                <span className="font-sans text-sm font-bold text-[#111111] mt-0.5 leading-snug">
                   Dental Technology
                 </span>
               </div>
