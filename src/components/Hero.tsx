@@ -92,12 +92,12 @@ export default function Hero() {
             animate="visible"
             className="lg:col-span-4 flex flex-col items-start text-left self-center py-6"
           >
-            {/* Small Clinic Heading */}
-            <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1 mb-5">
-              <span className="text-base md:text-lg lg:text-xl font-extrabold tracking-[0.2em] text-[#087CE2] uppercase leading-tight">
+            {/* Clinic Heading */}
+            <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-1.5 mb-6">
+              <span className="text-xl sm:text-2xl md:text-[26px] font-extrabold tracking-[0.18em] text-[#087CE2] uppercase leading-tight">
                 V.R. DENTAL CARE
               </span>
-              <span className="text-xs md:text-sm lg:text-base font-semibold tracking-[0.15em] text-[#64748B] uppercase leading-none">
+              <span className="text-sm sm:text-base md:text-lg font-bold tracking-[0.14em] text-[#64748B] uppercase leading-snug">
                 & DENTAL IMPLANT CENTRE
               </span>
             </motion.div>
